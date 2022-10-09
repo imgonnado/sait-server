@@ -1,9 +1,23 @@
 {
-  "moduleFileExtensions": ["js", "json", "ts"],
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "ts"
+  ],
   "rootDir": ".",
   "testEnvironment": "node",
   "testRegex": ".e2e-spec.ts$",
   "transform": {
     "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "moduleNameMapper": {
+    "@project/database/(.*)": "<rootDir>/../libs/api/database/src/$1",
+    "@project/database": "<rootDir>/../libs/api/database/src",
+    "@project/interfaces/(.*)": "<rootDir>/../libs/shared/interfaces/src/$1",
+    "@project/interfaces": "<rootDir>/../libs/shared/interfaces/src",
+    "@project/shared/enum/(.*)": "<rootDir>/../libs/shared/enum/src/$1",
+    "@project/shared/enum": "<rootDir>/../libs/shared/enum/src",
+    "@project/api/graphql/(.*)": "<rootDir>/../libs/api/graphql/src/$1",
+    "@project/api/graphql": "<rootDir>/../libs/api/graphql/src"
   }
 }
