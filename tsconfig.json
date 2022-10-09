@@ -1,24 +1,3 @@
-// {
-//   "compilerOptions": {
-//     "module": "commonjs",
-//     "declaration": true,
-//     "removeComments": true,
-//     "emitDecoratorMetadata": true,
-//     "experimentalDecorators": true,
-//     "allowSyntheticDefaultImports": true,
-//     "target": "es2017",
-//     "sourceMap": true,
-//     "outDir": "./dist",
-//     "baseUrl": "./",
-//     "incremental": true,
-//     "skipLibCheck": true,
-//     "strictNullChecks": false,
-//     "noImplicitAny": false,
-//     "strictBindCallApply": false,
-//     "forceConsistentCasingInFileNames": false,
-//     "noFallthroughCasesInSwitch": false
-//   }
-// }
 {
   "compilerOptions": {
     "module": "commonjs",
@@ -29,7 +8,33 @@
     "allowSyntheticDefaultImports": true,
     "target": "es2017",
     "paths": {
-      "~/*": ["src/*"]
+      "~/*": [
+        "src/*"
+      ],
+      "@project/api/database": [
+        "libs/api/database/src"
+      ],
+      "@project/api/database/*": [
+        "libs/api/database/src/*"
+      ],
+      "@project/shared/interfaces": [
+        "libs/shared/interfaces/src"
+      ],
+      "@project/shared/interfaces/*": [
+        "libs/shared/interfaces/src/*"
+      ],
+      "@project/shared/enum": [
+        "libs/shared/enum/src"
+      ],
+      "@project/shared/enum/*": [
+        "libs/shared/enum/src/*"
+      ],
+      "@project/api/graphql": [
+        "libs/api/graphql/src"
+      ],
+      "@project/api/graphql/*": [
+        "libs/api/graphql/src/*"
+      ]
     },
     "sourceMap": true,
     "outDir": "./dist",
@@ -41,7 +46,7 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
-    "allowJs": true /* Allow javascript files to be compiled. */,
-    "esModuleInterop": true /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
+    "allowJs": true,
+    "esModuleInterop": true
   }
 }
