@@ -27,7 +27,7 @@ export class DatabaseConfig implements TypeOrmOptionsFactory {
       autoLoadEntities: true,
       synchronize: this.DATABASE_CONFIG.SYNCHRONIZE ?? false,
       logging: this.IS_DEVELOPMENT,
-      keepConnectionAlive: true,
+      // keepConnectionAlive: true,
     };
   }
 }

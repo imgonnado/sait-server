@@ -17,7 +17,7 @@ import { UserInterestKeywordRepository } from './user-interest-keyword.repositor
       imports: [NestjsQueryTypeOrmModule.forFeature([UserInterestKeywordEntity])],
       dtos: [{ DTOClass: UserInterestKeywordDTO }],
     }),
-    TypeOrmModule.forFeature([UserInterestKeywordEntity, UserInterestKeywordRepository]),
+    NestjsQueryTypeOrmModule.forFeature([UserInterestKeywordEntity, UserInterestKeywordRepository]),
   ],
 })
 export class UserInterestKeywordModule {}

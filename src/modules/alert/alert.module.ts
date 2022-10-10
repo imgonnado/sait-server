@@ -14,10 +14,10 @@ import { AlertRepository } from './alert.repository';
   providers: [AlertResolver, AlertService],
   imports: [
     NestjsQueryGraphQLModule.forFeature({
-      imports: [NestjsQueryTypeOrmModule.forFeature([AlertEntity])],
+      imports: [NestjsQueryTypeOrmModule.forFeature([AlertEntity, AlertRepository])],
       dtos: [{ DTOClass: AlertDTO }],
     }),
-    TypeOrmModule.forFeature([AlertEntity, AlertRepository]),
+    NestjsQueryTypeOrmModule.forFeature([AlertEntity, AlertRepository]),
   ],
 })
 export class AlertModule {}

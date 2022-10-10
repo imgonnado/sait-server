@@ -17,7 +17,7 @@ import { ProfileRepository } from './profile.repository';
       imports: [NestjsQueryTypeOrmModule.forFeature([ProfileEntity])],
       dtos: [{ DTOClass: ProfileDTO }],
     }),
-    TypeOrmModule.forFeature([ProfileEntity, ProfileRepository]),
+    NestjsQueryTypeOrmModule.forFeature([ProfileEntity, ProfileRepository]),
   ],
 })
 export class ProfileModule {}

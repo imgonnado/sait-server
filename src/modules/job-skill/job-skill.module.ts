@@ -17,7 +17,7 @@ import { JobSkillRepository } from './job-skill.repository';
       imports: [NestjsQueryTypeOrmModule.forFeature([JobSkillEntity])],
       dtos: [{ DTOClass: JobSkillDTO }],
     }),
-    TypeOrmModule.forFeature([JobSkillEntity, JobSkillRepository]),
+    NestjsQueryTypeOrmModule.forFeature([JobSkillEntity, JobSkillRepository]),
   ],
 })
 export class JobSkillModule {}

@@ -10,14 +10,17 @@ import { AdminuserService } from './adminuser.service';
 import { AdminuserResolver } from './adminuser.resolver';
 import { AdminuserRepository } from './adminuser.repository';
 
+const nestjsQueryGraphQLModule = NestjsQueryTypeOrmModule.forFeature([AdminuserEntity, AdminuserRepository]);
+
 @Module({
   providers: [AdminuserResolver, AdminuserService],
   imports: [
     NestjsQueryGraphQLModule.forFeature({
-      imports: [NestjsQueryTypeOrmModule.forFeature([AdminuserEntity])],
+      imports: [nestjsQueryGraphQLModule],
       dtos: [{ DTOClass: AdminuserDTO }],
     }),
-    TypeOrmModule.forFeature([AdminuserEntity, AdminuserRepository]),
+    nestjsQueryGraphQLModule,
   ],
+  exports: [nestjsQueryGraphQLModule],
 })
 export class AdminuserModule {}

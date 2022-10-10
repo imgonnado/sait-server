@@ -5,7 +5,7 @@ import { CreatedOnlyBaseEntity } from '../base/createdOnly.entity';
 
 import { NoticeEntity } from '@project/api/database';
 
-@Entity('adminuser', { orderBy: { id: 'DESC' }, database: 'sait_test' })
+@Entity('adminuser', { orderBy: { id: 'DESC' } })
 export class AdminuserEntity extends CreatedOnlyBaseEntity implements IAdminuser {
   @Column('varchar', {
     name: 'name',

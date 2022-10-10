@@ -16,7 +16,7 @@ import { BoardRepository } from './board.repository';
       imports: [NestjsQueryTypeOrmModule.forFeature([BoardEntity])],
       dtos: [{ DTOClass: BoardDTO }],
     }),
-    TypeOrmModule.forFeature([BoardEntity]),
+    NestjsQueryTypeOrmModule.forFeature([BoardEntity]),
   ],
   providers: [BoardResolver, BoardService, BoardRepository],
 })

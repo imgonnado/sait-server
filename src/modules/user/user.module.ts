@@ -17,7 +17,7 @@ import { UserRepository } from './user.repository';
       imports: [NestjsQueryTypeOrmModule.forFeature([UserEntity])],
       dtos: [{ DTOClass: UserDTO }],
     }),
-    TypeOrmModule.forFeature([UserEntity, UserRepository]),
+    NestjsQueryTypeOrmModule.forFeature([UserEntity, UserRepository]),
   ],
 })
 export class UserModule {}

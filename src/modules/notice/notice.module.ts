@@ -17,7 +17,7 @@ import { NoticeRepository } from './notice.repository';
       imports: [NestjsQueryTypeOrmModule.forFeature([NoticeEntity])],
       dtos: [{ DTOClass: NoticeDTO }],
     }),
-    TypeOrmModule.forFeature([NoticeEntity, NoticeRepository]),
+    NestjsQueryTypeOrmModule.forFeature([NoticeEntity, NoticeRepository]),
   ],
 })
 export class NoticeModule {}

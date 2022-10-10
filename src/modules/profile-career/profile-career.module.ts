@@ -17,7 +17,7 @@ import { ProfileCareerRepository } from './profile-career.repository';
       imports: [NestjsQueryTypeOrmModule.forFeature([ProfileCareerEntity])],
       dtos: [{ DTOClass: ProfileCareerDTO }],
     }),
-    TypeOrmModule.forFeature([ProfileCareerEntity, ProfileCareerRepository]),
+    NestjsQueryTypeOrmModule.forFeature([ProfileCareerEntity, ProfileCareerRepository]),
   ],
 })
 export class ProfileCareerModule {}

@@ -1,7 +1,7 @@
 import * as path from 'path';
 import { ApplicationConfigInterface } from '~/types/services/application.config.interface';
 
-export const config: ApplicationConfigInterface = {
+export const config: Partial<ApplicationConfigInterface> = {
   DEBUG: true,
   APP: {
     APP_NAME: 'SAIT API',
@@ -18,5 +18,6 @@ export const config: ApplicationConfigInterface = {
     USERNAME: 'root',
     PASSWORD: 'pwd1234',
     DATABASE: 'sait_test',
+    SYNCHRONIZE: true,
   },
 };
