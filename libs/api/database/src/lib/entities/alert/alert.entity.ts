@@ -9,14 +9,14 @@ import { UserEntity } from '@project/api/database';
 export class AlertEntity extends CreatedOnlyBaseEntity implements IAlert {
   @Column('bigint', {
     name: 'user_id',
-    comment: '회원id(n::1)'
+    comment: '회원id(n::1)',
   })
   userId: string;
 
   @Column('bigint', {
     name: 'target_user_id',
     nullable: true,
-    comment: '대상회원id'
+    comment: '대상회원id',
   })
   targetUserId: string | null;
 
@@ -25,14 +25,14 @@ export class AlertEntity extends CreatedOnlyBaseEntity implements IAlert {
     nullable: true,
     comment: '알림타입',
     enum: AlertType,
-    default: AlertType.general
+    default: AlertType.general,
   })
   alertType: AlertType;
 
   @Column('bigint', {
     name: 'project_id',
     nullable: true,
-    comment: '프로젝트id'
+    comment: '프로젝트id',
   })
   projectId: string | null;
 
@@ -40,7 +40,7 @@ export class AlertEntity extends CreatedOnlyBaseEntity implements IAlert {
     name: 'msg',
     nullable: true,
     comment: '메시지',
-    length: 500
+    length: 500,
   })
   msg: string | null;
 
@@ -49,7 +49,7 @@ export class AlertEntity extends CreatedOnlyBaseEntity implements IAlert {
     nullable: true,
     comment: '수신여부',
     enum: Flag,
-    default: Flag.N
+    default: Flag.N,
   })
   readFlag: Flag;
 

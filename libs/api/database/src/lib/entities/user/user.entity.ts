@@ -9,7 +9,7 @@ import {
   ProjectMemberEntity,
   ProjectMemberOutEntity,
   ProjectReviewEntity,
-  UserInterestKeywordEntity
+  UserInterestKeywordEntity,
 } from '@project/api/database';
 
 @Entity('user', { orderBy: { id: 'DESC' } })
@@ -17,7 +17,7 @@ export class UserEntity extends CreatedOnlyBaseEntity implements IUser {
   @Column('varchar', {
     name: 'name',
     comment: '이름',
-    length: 20
+    length: 20,
   })
   name: string;
 
@@ -25,28 +25,28 @@ export class UserEntity extends CreatedOnlyBaseEntity implements IUser {
     name: 'nickname',
     nullable: true,
     comment: '닉네임',
-    length: 20
+    length: 20,
   })
   nickname: string | null;
 
   @Column('varchar', {
     name: 'email',
     comment: '이메일',
-    length: 100
+    length: 100,
   })
   email: string;
 
   @Column('varchar', {
     name: 'password',
     comment: '비밀번호',
-    length: 20
+    length: 20,
   })
   password: string;
 
   @Column('tinyint', {
     name: 'login_type',
     nullable: true,
-    comment: '소셜타입'
+    comment: '소셜타입',
   })
   loginType: number | null;
 
@@ -54,7 +54,7 @@ export class UserEntity extends CreatedOnlyBaseEntity implements IUser {
     name: 'image',
     nullable: true,
     comment: '이미지',
-    length: 500
+    length: 500,
   })
   image: string | null;
 
@@ -63,31 +63,31 @@ export class UserEntity extends CreatedOnlyBaseEntity implements IUser {
 
   @OneToMany(() => ProjectBookmarkEntity, projectBookmark => projectBookmark.user, {
     cascade: true,
-    createForeignKeyConstraints: false
+    createForeignKeyConstraints: false,
   })
   projectBookmarks: ProjectBookmarkEntity[];
 
   @OneToMany(() => ProjectMemberEntity, projectMember => projectMember.user, {
     cascade: true,
-    createForeignKeyConstraints: false
+    createForeignKeyConstraints: false,
   })
   projectMembers: ProjectMemberEntity[];
 
   @OneToMany(() => ProjectMemberOutEntity, projectMemberOut => projectMemberOut.user, {
     cascade: true,
-    createForeignKeyConstraints: false
+    createForeignKeyConstraints: false,
   })
   projectMemberOuts: ProjectMemberOutEntity[];
 
   @OneToMany(() => ProjectReviewEntity, projectReview => projectReview.user, {
     cascade: true,
-    createForeignKeyConstraints: false
+    createForeignKeyConstraints: false,
   })
   projectReviews: ProjectReviewEntity[];
 
   @OneToMany(() => UserInterestKeywordEntity, userInterestKeyword => userInterestKeyword.user, {
     cascade: true,
-    createForeignKeyConstraints: false
+    createForeignKeyConstraints: false,
   })
   userInterestKeywords: UserInterestKeywordEntity[];
 }

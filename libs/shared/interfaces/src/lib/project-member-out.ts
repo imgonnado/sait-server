@@ -15,7 +15,7 @@ export const FieldsProjectMemberOutCreate: Readonly<Array<keyof IProjectMemberOu
   'userId',
   'projectLeaderUserId',
   'reasonType',
-  'description'
+  'description',
 ] as const;
 
 export const FieldsProjectMemberOutUpdate: Readonly<Array<keyof IProjectMemberOut>> = [
@@ -23,7 +23,7 @@ export const FieldsProjectMemberOutUpdate: Readonly<Array<keyof IProjectMemberOu
   'userId',
   'projectLeaderUserId',
   'reasonType',
-  'description'
+  'description',
 ] as const;
 
 export type IProjectMemberOutCreate = Pick<IProjectMemberOut, typeof FieldsProjectMemberOutCreate[number]>;

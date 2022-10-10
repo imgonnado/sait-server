@@ -9,13 +9,13 @@ import { ProjectResearchEntity, UserEntity } from '@project/api/database';
 export class ProjectResearchAnswerEntity extends CreatedOnlyBaseEntity implements IProjectResearchAnswer {
   @Column('bigint', {
     name: 'project_research_id',
-    comment: '리서치id(n:1)'
+    comment: '리서치id(n:1)',
   })
   projectResearchId: string;
 
   @Column('bigint', {
     name: 'user_id',
-    comment: '회원id(n::1)'
+    comment: '회원id(n::1)',
   })
   userId: string;
 
@@ -23,12 +23,12 @@ export class ProjectResearchAnswerEntity extends CreatedOnlyBaseEntity implement
     name: 'answer',
     nullable: true,
     comment: '리서치 답변',
-    length: 200
+    length: 200,
   })
   answer: string | null;
 
   @ManyToOne(() => ProjectResearchEntity, projectResearch => projectResearch.projectResearchAnswers, {
-    createForeignKeyConstraints: false
+    createForeignKeyConstraints: false,
   })
   @JoinColumn([{ name: 'project_research_id', referencedColumnName: 'id' }])
   projectResearch: ProjectResearchEntity;

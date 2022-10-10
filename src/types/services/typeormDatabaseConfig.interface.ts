@@ -6,4 +6,5 @@ export declare interface TypeormDatabaseConfigInterface {
   USERNAME: string;
   PASSWORD: string;
   DATABASE: string;
+  SYNCHRONIZE: boolean;
 }

@@ -30,7 +30,7 @@ export const FieldsBoardCreate: Readonly<Array<keyof IBoardBase>> = [
   'nogoodCnt',
   'memId',
   'password',
-  'name'
+  'name',
 ] as const;
 
 export const FieldsBoardUpdate: Readonly<Array<keyof IBoardBase>> = [
@@ -45,7 +45,7 @@ export const FieldsBoardUpdate: Readonly<Array<keyof IBoardBase>> = [
   'nogoodCnt',
   'memId',
   'password',
-  'name'
+  'name',
 ] as const;
 
 export type IBoardCreate = Pick<IBoardBase, typeof FieldsBoardCreate[number]>;

@@ -3,18 +3,18 @@ export enum StatusType {
   recruit = 'recruit',
   progress = 'progress',
   complete = 'complete',
-  hold = 'hold'
+  hold = 'hold',
 }
 
 export enum OnoffType {
   onoff = 'onoff',
   on = 'on',
-  off = 'off'
+  off = 'off',
 }
 
 export enum CategoryType {
   junior = 'junior',
   rapid = 'rapid',
   hobby = 'hobby',
-  senior = 'senior'
+  senior = 'senior',
 }

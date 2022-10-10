@@ -9,14 +9,14 @@ import { UserEntity } from '@project/api/database';
 export class UserInterestKeywordEntity extends CreatedOnlyBaseEntity implements IUserInterestKeyword {
   @Column('bigint', {
     name: 'user_id',
-    comment: '회원id(n:1)'
+    comment: '회원id(n:1)',
   })
   userId: string;
 
   @Column('varchar', {
     name: 'keyword',
     comment: '관심키워드',
-    length: 50
+    length: 50,
   })
   keyword: string;
 

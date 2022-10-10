@@ -9,13 +9,13 @@ import { ProfileEntity, ProjectEntity, UserEntity } from '@project/api/database'
 export class ProjectMemberEntity extends CreatedOnlyBaseEntity implements IProjectMember {
   @Column('bigint', {
     name: 'project_id',
-    comment: '프로젝트id(n:1)'
+    comment: '프로젝트id(n:1)',
   })
   projectId: string;
 
   @Column('bigint', {
     name: 'user_id',
-    comment: '회원id(n:1)'
+    comment: '회원id(n:1)',
   })
   userId: string;
 
@@ -24,13 +24,13 @@ export class ProjectMemberEntity extends CreatedOnlyBaseEntity implements IProje
     nullable: true,
     comment: '역할',
     default: 'member',
-    length: 30
+    length: 30,
   })
   role: string | null;
 
   @Column('bigint', {
     name: 'profile_id',
-    comment: '프로필id(n:1)'
+    comment: '프로필id(n:1)',
   })
   profileId: string;
 
@@ -38,7 +38,7 @@ export class ProjectMemberEntity extends CreatedOnlyBaseEntity implements IProje
     name: 'job_code',
     nullable: true,
     comment: '직무코드',
-    length: 50
+    length: 50,
   })
   jobCode: string | null;
 
@@ -47,7 +47,7 @@ export class ProjectMemberEntity extends CreatedOnlyBaseEntity implements IProje
     nullable: true,
     comment: '상태',
     default: 'waiting',
-    length: 50
+    length: 50,
   })
   status: string | null;
 

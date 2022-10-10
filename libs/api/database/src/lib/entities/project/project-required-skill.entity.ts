@@ -9,13 +9,13 @@ import { JobSkillEntity, ProjectEntity } from '@project/api/database';
 export class ProjectRequiredSkillEntity extends CreatedOnlyBaseEntity implements IProjectRequiredSkill {
   @Column('bigint', {
     name: 'project_id',
-    comment: '프로젝트id(n:1)'
+    comment: '프로젝트id(n:1)',
   })
   projectId: string;
 
   @Column('bigint', {
     name: 'job_skill_id',
-    comment: '직무스킬id(n::1)'
+    comment: '직무스킬id(n::1)',
   })
   jobSkillId: string;
 

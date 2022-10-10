@@ -8,8 +8,8 @@ import './enum-registration';
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
       //sortSchema: true,
-      autoSchemaFile: '~/schema.gql'
-    })
-  ]
+      autoSchemaFile: '~/schema.gql',
+    }),
+  ],
 })
 export class GraphqlModule {}

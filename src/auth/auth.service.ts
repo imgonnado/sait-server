@@ -5,10 +5,7 @@ import { UserKakaoDto } from './dto/user.kakao.dto';
 
 @Injectable()
 export class AuthService {
-  constructor(
-    private readonly jwtService: JwtService,
-    private readonly userService: UserService,
-  ) {}
+  constructor(private readonly jwtService: JwtService, private readonly userService: UserService) {}
   private tempUserJwtService: JwtService;
   async kakaoLogin(user: UserKakaoDto): Promise<{ accessToken: string }> {
     return { accessToken: 'test' };

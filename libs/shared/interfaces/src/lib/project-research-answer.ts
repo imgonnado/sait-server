@@ -10,13 +10,13 @@ export interface IProjectResearchAnswer extends IProjectResearchAnswerBase, ICre
 export const FieldsProjectResearchAnswerCreate: Readonly<Array<keyof IProjectResearchAnswer>> = [
   'projectResearchId',
   'userId',
-  'answer'
+  'answer',
 ] as const;
 
 export const FieldsProjectResearchAnswerUpdate: Readonly<Array<keyof IProjectResearchAnswer>> = [
   'projectResearchId',
   'userId',
-  'answer'
+  'answer',
 ] as const;
 
 export type IProjectResearchAnswerCreate = Pick<

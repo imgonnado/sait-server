@@ -9,14 +9,14 @@ import { AdminuserEntity, ProjectEntity } from '@project/api/database';
 export class ProjectPermitEntity extends CreatedOnlyBaseEntity implements IProjectPermit {
   @Column('bigint', {
     name: 'project_id',
-    comment: '프로젝트id(n:1)'
+    comment: '프로젝트id(n:1)',
   })
   projectId: string;
 
   @Column('bigint', {
     name: 'adminuser_id',
     nullable: true,
-    comment: '관리자(n::1)'
+    comment: '관리자(n::1)',
   })
   adminuserId: string | null;
 

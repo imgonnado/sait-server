@@ -5,5 +5,5 @@ export enum AlertType {
   project_accept = 'project_accept',
   project_progress = 'project_progress',
   project_success = 'project_success',
-  project_hold = 'project_hold'
+  project_hold = 'project_hold',
 }

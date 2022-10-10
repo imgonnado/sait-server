@@ -14,7 +14,7 @@ export const FieldsProjectReviewCreate: Readonly<Array<keyof IProjectReview>> = 
   'userId',
   'targetUserId',
   'feedback',
-  'score'
+  'score',
 ] as const;
 
 export const FieldsProjectReviewUpdate: Readonly<Array<keyof IProjectReview>> = [
@@ -22,7 +22,7 @@ export const FieldsProjectReviewUpdate: Readonly<Array<keyof IProjectReview>> = 
   'userId',
   'targetUserId',
   'feedback',
-  'score'
+  'score',
 ] as const;
 
 export type IProjectReviewCreate = Pick<IProjectReview, typeof FieldsProjectReviewCreate[number]>;

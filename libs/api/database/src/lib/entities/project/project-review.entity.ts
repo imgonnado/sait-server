@@ -9,34 +9,34 @@ import { ProjectEntity, UserEntity } from '@project/api/database';
 export class ProjectReviewEntity extends CreatedOnlyBaseEntity implements IProjectReview {
   @Column('bigint', {
     name: 'project_id',
-    comment: '프로젝트id(n:1)'
+    comment: '프로젝트id(n:1)',
   })
   projectId: string;
 
   @Column('bigint', {
     name: 'user_id',
-    comment: '회원id(n:1)'
+    comment: '회원id(n:1)',
   })
   userId: string;
 
   @Column('bigint', {
     name: 'target_user_id',
     nullable: true,
-    comment: '대상회원id'
+    comment: '대상회원id',
   })
   targetUserId: string | null;
 
   @Column('text', {
     name: 'feedback',
     nullable: true,
-    comment: '리뷰내용'
+    comment: '리뷰내용',
   })
   feedback: string | null;
 
   @Column('tinyint', {
     name: 'score',
     comment: '점수',
-    default: '1'
+    default: '1',
   })
   score: number;
 

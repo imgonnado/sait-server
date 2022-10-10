@@ -13,14 +13,14 @@ export const FieldsNoticeCreate: Readonly<Array<keyof INotice>> = [
   'category',
   'subject',
   'content',
-  'adminuserId'
+  'adminuserId',
 ] as const;
 
 export const FieldsNoticeUpdate: Readonly<Array<keyof INotice>> = [
   'category',
   'subject',
   'content',
-  'adminuserId'
+  'adminuserId',
 ] as const;
 
 export type INoticeCreate = Pick<INotice, typeof FieldsNoticeCreate[number]>;

@@ -9,14 +9,14 @@ import { JobEntity, ProjectEntity } from '@project/api/database';
 export class ProjectRequiredMemberEntity extends CreatedOnlyBaseEntity implements IProjectRequiredMember {
   @Column('bigint', {
     name: 'project_id',
-    comment: '프로젝트id(n:1)'
+    comment: '프로젝트id(n:1)',
   })
   projectId: string;
 
   @Column('bigint', {
     name: 'job_id',
     nullable: true,
-    comment: '직무id(n::1)'
+    comment: '직무id(n::1)',
   })
   jobId: string | null;
 
@@ -24,7 +24,7 @@ export class ProjectRequiredMemberEntity extends CreatedOnlyBaseEntity implement
     name: 'job_count',
     nullable: true,
     comment: '필요직무수',
-    default: '0'
+    default: '0',
   })
   jobCount: number | null;
 

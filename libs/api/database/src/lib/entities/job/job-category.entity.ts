@@ -10,14 +10,14 @@ export class JobCategoryEntity extends CreatedOnlyBaseEntity implements IJobCate
   @Column('varchar', {
     name: 'category_name',
     comment: '카테고리명',
-    length: 50
+    length: 50,
   })
   categoryName: string;
 
   @Column('bigint', {
     name: 'parent_id',
     nullable: true,
-    comment: '부모id(p)'
+    comment: '부모id(p)',
   })
   parentId: string | null;
 
@@ -25,7 +25,7 @@ export class JobCategoryEntity extends CreatedOnlyBaseEntity implements IJobCate
     name: 'priority',
     nullable: true,
     comment: '순서',
-    default: '0'
+    default: '0',
   })
   priority: number | null;
 

@@ -21,14 +21,14 @@ export const FieldsProfileCreate: Readonly<Array<keyof IProfile>> = [
   'userId',
   'default',
   'jobId',
-  'introduction'
+  'introduction',
 ] as const;
 
 export const FieldsProfileUpdate: Readonly<Array<keyof IProfile>> = [
   'userId',
   'default',
   'jobId',
-  'introduction'
+  'introduction',
 ] as const;
 
 export type IProfileCreate = Pick<IProfile, typeof FieldsProfileCreate[number]>;

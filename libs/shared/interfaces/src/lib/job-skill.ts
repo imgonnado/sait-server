@@ -12,14 +12,14 @@ export const FieldsJobSkillCreate: Readonly<Array<keyof IJobSkill>> = [
   'jobId',
   'skillName',
   'description',
-  'image'
+  'image',
 ] as const;
 
 export const FieldsJobSkillUpdate: Readonly<Array<keyof IJobSkill>> = [
   'jobId',
   'skillName',
   'description',
-  'image'
+  'image',
 ] as const;
 
 export type IJobSkillCreate = Pick<IJobSkill, typeof FieldsJobSkillCreate[number]>;

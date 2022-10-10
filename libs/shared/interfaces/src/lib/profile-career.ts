@@ -14,7 +14,7 @@ export const FieldsProfileCareerCreate: Readonly<Array<keyof IProfileCareer>> = 
   'title',
   'careerMonths',
   'description',
-  'urls'
+  'urls',
 ] as const;
 
 export const FieldsProfileCareerUpdate: Readonly<Array<keyof IProfileCareer>> = [
@@ -22,7 +22,7 @@ export const FieldsProfileCareerUpdate: Readonly<Array<keyof IProfileCareer>> = 
   'title',
   'careerMonths',
   'description',
-  'urls'
+  'urls',
 ] as const;
 
 export type IProfileCareerCreate = Pick<IProfileCareer, typeof FieldsProfileCareerCreate[number]>;

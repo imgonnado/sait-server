@@ -10,13 +10,13 @@ export interface IProjectRequiredMember extends IProjectRequiredMemberBase, ICre
 export const FieldsProjectRequiredMemberCreate: Readonly<Array<keyof IProjectRequiredMember>> = [
   'projectId',
   'jobId',
-  'jobCount'
+  'jobCount',
 ] as const;
 
 export const FieldsProjectRequiredMemberUpdate: Readonly<Array<keyof IProjectRequiredMember>> = [
   'projectId',
   'jobId',
-  'jobCount'
+  'jobCount',
 ] as const;
 
 export type IProjectRequiredMemberCreate = Pick<

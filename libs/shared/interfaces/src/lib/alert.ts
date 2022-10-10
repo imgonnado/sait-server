@@ -17,7 +17,7 @@ export const FieldsAlertCreate: Readonly<Array<keyof IAlert>> = [
   'alertType',
   'projectId',
   'msg',
-  'readFlag'
+  'readFlag',
 ] as const;
 
 export const FieldsAlertUpdate: Readonly<Array<keyof IAlert>> = [
@@ -26,7 +26,7 @@ export const FieldsAlertUpdate: Readonly<Array<keyof IAlert>> = [
   'alertType',
   'projectId',
   'msg',
-  'readFlag'
+  'readFlag',
 ] as const;
 
 export type IAlertCreate = Pick<IAlert, typeof FieldsAlertCreate[number]>;

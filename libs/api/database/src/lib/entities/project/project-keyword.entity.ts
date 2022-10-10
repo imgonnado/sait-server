@@ -9,14 +9,14 @@ import { ProjectEntity } from '@project/api/database';
 export class ProjectKeywordEntity extends CreatedOnlyBaseEntity implements IProjectKeyword {
   @Column('bigint', {
     name: 'project_id',
-    comment: '프로젝트id(n:1)'
+    comment: '프로젝트id(n:1)',
   })
   projectId: string;
 
   @Column('varchar', {
     name: 'keyword',
     comment: '관심키워드',
-    length: 50
+    length: 50,
   })
   keyword: string;
 

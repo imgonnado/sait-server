@@ -14,13 +14,13 @@ export interface IProjectResearch extends IProjectResearchBase, ICreatedOnlyBase
 export const FieldsProjectResearchCreate: Readonly<Array<keyof IProjectResearch>> = [
   'projectId',
   'priority',
-  'title'
+  'title',
 ] as const;
 
 export const FieldsProjectResearchUpdate: Readonly<Array<keyof IProjectResearch>> = [
   'projectId',
   'priority',
-  'title'
+  'title',
 ] as const;
 
 export type IProjectResearchCreate = Pick<IProjectResearch, typeof FieldsProjectResearchCreate[number]>;

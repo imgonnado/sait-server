@@ -8,12 +8,12 @@ export interface IProjectRequiredSkill extends IProjectRequiredSkillBase, ICreat
 
 export const FieldsProjectRequiredSkillCreate: Readonly<Array<keyof IProjectRequiredSkill>> = [
   'projectId',
-  'jobSkillId'
+  'jobSkillId',
 ] as const;
 
 export const FieldsProjectRequiredSkillUpdate: Readonly<Array<keyof IProjectRequiredSkill>> = [
   'projectId',
-  'jobSkillId'
+  'jobSkillId',
 ] as const;
 
 export type IProjectRequiredSkillCreate = Pick<IProjectRequiredSkill, typeof FieldsProjectRequiredSkillCreate[number]>;

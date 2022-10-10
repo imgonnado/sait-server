@@ -10,14 +10,14 @@ export class JobEntity extends CreatedOnlyBaseEntity implements IJob {
   @Column('varchar', {
     name: 'job_title',
     comment: '직무명',
-    length: 100
+    length: 100,
   })
   jobTitle: string;
 
   @Column('bigint', {
     name: 'job_category_id',
     nullable: true,
-    comment: '소속카테고리(n:1)'
+    comment: '소속카테고리(n:1)',
   })
   jobCategoryId: string | null;
 
@@ -25,7 +25,7 @@ export class JobEntity extends CreatedOnlyBaseEntity implements IJob {
     name: 'job_code',
     nullable: true,
     comment: '직무코드',
-    length: 50
+    length: 50,
   })
   jobCode: string | null;
 

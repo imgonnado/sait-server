@@ -8,12 +8,12 @@ export interface IUserInterestKeyword extends IUserInterestKeywordBase, ICreated
 
 export const FieldsUserInterestKeywordCreate: Readonly<Array<keyof IUserInterestKeyword>> = [
   'userId',
-  'keyword'
+  'keyword',
 ] as const;
 
 export const FieldsUserInterestKeywordUpdate: Readonly<Array<keyof IUserInterestKeyword>> = [
   'userId',
-  'keyword'
+  'keyword',
 ] as const;
 
 export type IUserInterestKeywordCreate = Pick<IUserInterestKeyword, typeof FieldsUserInterestKeywordCreate[number]>;

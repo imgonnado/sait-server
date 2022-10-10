@@ -12,7 +12,7 @@ export class NoticeEntity extends CreatedOnlyBaseEntity implements INotice {
     nullable: true,
     comment: '카테고리',
     enum: BoardCategoryType,
-    default: BoardCategoryType.notice
+    default: BoardCategoryType.notice,
   })
   category: BoardCategoryType;
 
@@ -20,20 +20,20 @@ export class NoticeEntity extends CreatedOnlyBaseEntity implements INotice {
     name: 'subject',
     nullable: true,
     comment: '제목',
-    length: 500
+    length: 500,
   })
   subject: string | null;
 
   @Column('text', {
     name: 'content',
     nullable: true,
-    comment: '내용'
+    comment: '내용',
   })
   content: string | null;
 
   @Column('bigint', {
     name: 'adminuser_id',
-    comment: '관리자id(n:1)'
+    comment: '관리자id(n:1)',
   })
   adminuserId: string;
 

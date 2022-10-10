@@ -6,7 +6,7 @@ export abstract class CreatedOnlyBaseEntity extends CommonBaseEntity implements 
   @CreateDateColumn({
     name: 'created_at',
     type: 'timestamp',
-    nullable: false
+    nullable: false,
   })
   createdAt!: Date;
 }
@@ -15,7 +15,7 @@ export abstract class CreatedOnlyEntity extends BaseEntity implements ICreatedOn
   @CreateDateColumn({
     name: 'created_at',
     type: 'timestamp',
-    nullable: false
+    nullable: false,
   })
   createdAt!: Date;
 }

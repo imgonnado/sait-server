@@ -1,6 +1,8 @@
-import { Repository } from 'typeorm';
+import { UserEntity } from '@project/api/database';
+//import { BaseRepository } from '@project/api/database';
+import { EntityRepository, Repository } from 'typeorm';
+
 import { CustomRepository } from '~/db/typeorm-ex.decorator';
-import { UserEntity } from './user.entity';
 
 @CustomRepository(UserEntity)
 export class UserRepository extends Repository<UserEntity> {}

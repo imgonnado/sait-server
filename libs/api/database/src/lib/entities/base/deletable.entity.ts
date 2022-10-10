@@ -9,7 +9,7 @@ export abstract class DeletableEntity extends UpdateableEntity implements IDelet
     name: 'deleted_at',
     type: 'timestamp',
     nullable: false,
-    comment: 'Soft 삭제 일자'
+    comment: 'Soft 삭제 일자',
   })
   deletedAt!: Date;
 }
@@ -20,7 +20,7 @@ export abstract class DeletableBaseEntity extends UpdateableBaseEntity implement
     name: 'deleted_at',
     type: 'timestamp',
     nullable: false,
-    comment: 'Soft 삭제 일자'
+    comment: 'Soft 삭제 일자',
   })
   deletedAt!: Date;
 }

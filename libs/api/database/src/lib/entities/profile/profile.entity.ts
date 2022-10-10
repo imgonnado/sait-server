@@ -8,14 +8,14 @@ import {
   ProfileCareerEntity,
   ProfileSkillEntity,
   ProjectMemberEntity,
-  UserEntity
+  UserEntity,
 } from '@project/api/database';
 
 @Entity('profile', { orderBy: { id: 'DESC' } })
 export class ProfileEntity extends CreatedOnlyBaseEntity implements IProfile {
   @Column('bigint', {
     name: 'user_id',
-    comment: '회원id(n:1)'
+    comment: '회원id(n:1)',
   })
   userId: string;
 
@@ -24,20 +24,20 @@ export class ProfileEntity extends CreatedOnlyBaseEntity implements IProfile {
     nullable: true,
     comment: '본캐여부',
     enum: Flag,
-    default: Flag.N
+    default: Flag.N,
   })
   default: Flag;
 
   @Column('bigint', {
     name: 'job_id',
-    comment: '직무id(n::1)'
+    comment: '직무id(n::1)',
   })
   jobId: string;
 
   @Column('text', {
     name: 'introduction',
     nullable: true,
-    comment: '자기소개'
+    comment: '자기소개',
   })
   introduction: string | null;
 
@@ -51,19 +51,19 @@ export class ProfileEntity extends CreatedOnlyBaseEntity implements IProfile {
 
   @OneToMany(() => ProfileCareerEntity, profileCareer => profileCareer.profile, {
     cascade: true,
-    createForeignKeyConstraints: false
+    createForeignKeyConstraints: false,
   })
   profileCareers: ProfileCareerEntity[];
 
   @OneToMany(() => ProfileSkillEntity, profileSkill => profileSkill.profile, {
     cascade: true,
-    createForeignKeyConstraints: false
+    createForeignKeyConstraints: false,
   })
   profileSkills: ProfileSkillEntity[];
 
   @OneToMany(() => ProjectMemberEntity, projectMember => projectMember.profile, {
     cascade: true,
-    createForeignKeyConstraints: false
+    createForeignKeyConstraints: false,
   })
   projectMembers: ProjectMemberEntity[];
 }

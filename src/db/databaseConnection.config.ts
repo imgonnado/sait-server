@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
+import { SnakeNamingStrategy } from 'typeorm-naming-strategies';
 import { TypeOrmModuleOptions, TypeOrmOptionsFactory } from '@nestjs/typeorm';
 import { ApplicationConfigInterface } from '~/types/services/application.config.interface';
 
@@ -18,13 +19,15 @@ export class DatabaseConfig implements TypeOrmOptionsFactory {
       type: this.DATABASE_CONFIG.TYPE,
       host: this.DATABASE_CONFIG.HOST,
       port: this.DATABASE_CONFIG.PORT,
+      timezone: 'Asia/Seoul',
       username: this.DATABASE_CONFIG.USERNAME,
       password: this.DATABASE_CONFIG.PASSWORD,
       database: this.DATABASE_CONFIG.DATABASE,
+      namingStrategy: new SnakeNamingStrategy(),
       autoLoadEntities: true,
-      synchronize: false,
+      synchronize: this.DATABASE_CONFIG.SYNCHRONIZE ?? false,
       logging: this.IS_DEVELOPMENT,
-      keepConnectionAlive: true
+      keepConnectionAlive: true,
     };
   }
 }

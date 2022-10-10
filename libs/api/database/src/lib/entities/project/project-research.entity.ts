@@ -9,14 +9,14 @@ import { ProjectEntity, ProjectResearchAnswerEntity } from '@project/api/databas
 export class ProjectResearchEntity extends CreatedOnlyBaseEntity implements IProjectResearch {
   @Column('bigint', {
     name: 'project_id',
-    comment: '프로젝트id(n:1)'
+    comment: '프로젝트id(n:1)',
   })
   projectId: string;
 
   @Column('int', {
     name: 'priority',
     nullable: true,
-    comment: '우선순위'
+    comment: '우선순위',
   })
   priority: number | null;
 
@@ -24,7 +24,7 @@ export class ProjectResearchEntity extends CreatedOnlyBaseEntity implements IPro
     name: 'title',
     nullable: true,
     comment: '리서치 항목명',
-    length: 100
+    length: 100,
   })
   title: string | null;
 
@@ -34,7 +34,7 @@ export class ProjectResearchEntity extends CreatedOnlyBaseEntity implements IPro
 
   @OneToMany(() => ProjectResearchAnswerEntity, projectResearchAnswer => projectResearchAnswer.projectResearch, {
     cascade: true,
-    createForeignKeyConstraints: false
+    createForeignKeyConstraints: false,
   })
   projectResearchAnswers: ProjectResearchAnswerEntity[];
 }

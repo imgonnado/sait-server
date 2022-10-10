@@ -9,20 +9,20 @@ import { ProjectEntity, UserEntity } from '@project/api/database';
 export class ProjectMemberOutEntity extends CreatedOnlyBaseEntity implements IProjectMemberOut {
   @Column('bigint', {
     name: 'project_id',
-    comment: '프로젝트id(n:1)'
+    comment: '프로젝트id(n:1)',
   })
   projectId: string;
 
   @Column('bigint', {
     name: 'user_id',
-    comment: '회원id(n:1)'
+    comment: '회원id(n:1)',
   })
   userId: string;
 
   @Column('bigint', {
     name: 'project_leader_user_id',
     nullable: true,
-    comment: '프로젝트리더id'
+    comment: '프로젝트리더id',
   })
   projectLeaderUserId: string | null;
 
@@ -31,7 +31,7 @@ export class ProjectMemberOutEntity extends CreatedOnlyBaseEntity implements IPr
     nullable: true,
     comment: '사유',
     enum: ReasonType,
-    default: ReasonType.denied
+    default: ReasonType.denied,
   })
   reasonType: ReasonType;
 
@@ -39,7 +39,7 @@ export class ProjectMemberOutEntity extends CreatedOnlyBaseEntity implements IPr
     name: 'description',
     nullable: true,
     comment: '상세내용',
-    length: 500
+    length: 500,
   })
   description: string | null;
 

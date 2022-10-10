@@ -51,7 +51,7 @@ export const FieldsProjectCreate: Readonly<Array<keyof IProject>> = [
   'hitCount',
   'bookmarkCount',
   'rate',
-  'directLink'
+  'directLink',
 ] as const;
 
 export const FieldsProjectUpdate: Readonly<Array<keyof IProject>> = [
@@ -67,7 +67,7 @@ export const FieldsProjectUpdate: Readonly<Array<keyof IProject>> = [
   'hitCount',
   'bookmarkCount',
   'rate',
-  'directLink'
+  'directLink',
 ] as const;
 
 export type IProjectCreate = Pick<IProject, typeof FieldsProjectCreate[number]>;

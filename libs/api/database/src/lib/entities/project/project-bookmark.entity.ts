@@ -9,14 +9,14 @@ import { ProjectEntity, UserEntity } from '@project/api/database';
 export class ProjectBookmarkEntity extends CreatedOnlyBaseEntity implements IProjectBookmark {
   @Column('bigint', {
     name: 'project_id',
-    comment: '프로젝트id(n::1)'
+    comment: '프로젝트id(n::1)',
   })
   projectId: string;
 
   @Column('bigint', {
     name: 'user_id',
     nullable: true,
-    comment: '회원id(n:1)'
+    comment: '회원id(n:1)',
   })
   userId: string | null;
 

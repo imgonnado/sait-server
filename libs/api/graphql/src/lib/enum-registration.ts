@@ -6,34 +6,34 @@ import {
   CategoryType,
   ReasonType,
   Flag,
-  SortDirection
+  SortDirection,
 } from '@project/shared/enum';
 import { registerEnumType } from '@nestjs/graphql';
 
 export default (() => {
   registerEnumType(Flag, {
     name: 'Flag',
-    description: 'Y or N'
+    description: 'Y or N',
   });
   registerEnumType(AlertType, {
-    name: 'AlertType'
+    name: 'AlertType',
   });
   registerEnumType(BoardCategoryType, {
-    name: 'BoardCategoryType'
+    name: 'BoardCategoryType',
   });
   registerEnumType(StatusType, {
-    name: 'StatusType'
+    name: 'StatusType',
   });
   registerEnumType(OnoffType, {
-    name: 'OnoffType'
+    name: 'OnoffType',
   });
   registerEnumType(CategoryType, {
-    name: 'CategoryType'
+    name: 'CategoryType',
   });
   registerEnumType(ReasonType, {
-    name: 'ReasonType'
+    name: 'ReasonType',
   });
   registerEnumType(SortDirection, {
-    name: 'SortDirection'
+    name: 'SortDirection',
   });
 })();

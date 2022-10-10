@@ -5,12 +5,12 @@ import { CreatedOnlyBaseEntity } from '../base/createdOnly.entity';
 
 import { NoticeEntity } from '@project/api/database';
 
-@Entity('adminuser', { orderBy: { id: 'DESC' } })
+@Entity('adminuser', { orderBy: { id: 'DESC' }, database: 'sait_test' })
 export class AdminuserEntity extends CreatedOnlyBaseEntity implements IAdminuser {
   @Column('varchar', {
     name: 'name',
     comment: '이름',
-    length: 20
+    length: 20,
   })
   name: string;
 
@@ -18,28 +18,28 @@ export class AdminuserEntity extends CreatedOnlyBaseEntity implements IAdminuser
     name: 'nickname',
     nullable: true,
     comment: '닉네임',
-    length: 20
+    length: 20,
   })
   nickname: string | null;
 
   @Column('varchar', {
     name: 'email',
     comment: '이메일',
-    length: 100
+    length: 100,
   })
   email: string;
 
   @Column('varchar', {
     name: 'password',
     comment: '비밀번호',
-    length: 20
+    length: 20,
   })
   password: string;
 
   @Column('tinyint', {
     name: 'login_type',
     nullable: true,
-    comment: '소셜타입'
+    comment: '소셜타입',
   })
   loginType: number | null;
 
@@ -47,7 +47,7 @@ export class AdminuserEntity extends CreatedOnlyBaseEntity implements IAdminuser
     name: 'image',
     nullable: true,
     comment: '이미지',
-    length: 500
+    length: 500,
   })
   image: string | null;
 

@@ -30,7 +30,7 @@ export const FieldsUserCreate: Readonly<Array<keyof IUser>> = [
   'email',
   'password',
   'loginType',
-  'image'
+  'image',
 ] as const;
 
 export const FieldsUserUpdate: Readonly<Array<keyof IUser>> = [
@@ -39,7 +39,7 @@ export const FieldsUserUpdate: Readonly<Array<keyof IUser>> = [
   'email',
   'password',
   'loginType',
-  'image'
+  'image',
 ] as const;
 
 export type IUserCreate = Pick<IUser, typeof FieldsUserCreate[number]>;

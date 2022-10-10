@@ -14,13 +14,13 @@ export interface IJobCategory extends IJobCategoryBase, ICreatedOnlyBase {
 export const FieldsJobCategoryCreate: Readonly<Array<keyof IJobCategory>> = [
   'categoryName',
   'parentId',
-  'priority'
+  'priority',
 ] as const;
 
 export const FieldsJobCategoryUpdate: Readonly<Array<keyof IJobCategory>> = [
   'categoryName',
   'parentId',
-  'priority'
+  'priority',
 ] as const;
 
 export type IJobCategoryCreate = Pick<IJobCategory, typeof FieldsJobCategoryCreate[number]>;

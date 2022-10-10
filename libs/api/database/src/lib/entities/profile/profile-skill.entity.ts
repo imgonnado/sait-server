@@ -9,13 +9,13 @@ import { JobSkillEntity, ProfileEntity } from '@project/api/database';
 export class ProfileSkillEntity extends CreatedOnlyBaseEntity implements IProfileSkill {
   @Column('bigint', {
     name: 'profile_id',
-    comment: '프로필id(n:1)'
+    comment: '프로필id(n:1)',
   })
   profileId: string;
 
   @Column('bigint', {
     name: 'job_skill_id',
-    comment: '직무스킬id(n::1)'
+    comment: '직무스킬id(n::1)',
   })
   jobSkillId: string;
 

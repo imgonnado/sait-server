@@ -16,7 +16,7 @@ export const FieldsProjectMemberCreate: Readonly<Array<keyof IProjectMember>> = 
   'role',
   'profileId',
   'jobCode',
-  'status'
+  'status',
 ] as const;
 
 export const FieldsProjectMemberUpdate: Readonly<Array<keyof IProjectMember>> = [
@@ -25,7 +25,7 @@ export const FieldsProjectMemberUpdate: Readonly<Array<keyof IProjectMember>> = 
   'role',
   'profileId',
   'jobCode',
-  'status'
+  'status',
 ] as const;
 
 export type IProjectMemberCreate = Pick<IProjectMember, typeof FieldsProjectMemberCreate[number]>;

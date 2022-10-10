@@ -17,6 +17,6 @@ export const config: ApplicationConfigInterface = {
     PORT: 13306,
     USERNAME: 'root',
     PASSWORD: 'pwd1234',
-    DATABASE: 'sait',
+    DATABASE: 'sait_test',
   },
 };

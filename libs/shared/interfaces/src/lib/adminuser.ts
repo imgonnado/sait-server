@@ -20,7 +20,7 @@ export const FieldsAdminuserCreate: Readonly<Array<keyof IAdminuser>> = [
   'email',
   'password',
   'loginType',
-  'image'
+  'image',
 ] as const;
 
 export const FieldsAdminuserUpdate: Readonly<Array<keyof IAdminuser>> = [
@@ -29,7 +29,7 @@ export const FieldsAdminuserUpdate: Readonly<Array<keyof IAdminuser>> = [
   'email',
   'password',
   'loginType',
-  'image'
+  'image',
 ] as const;
 
 export type IAdminuserCreate = Pick<IAdminuser, typeof FieldsAdminuserCreate[number]>;

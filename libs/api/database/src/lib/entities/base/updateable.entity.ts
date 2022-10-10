@@ -7,7 +7,7 @@ export abstract class UpdateableEntity extends CreatedOnlyEntity implements IUpd
   @AutoMap()
   @UpdateDateColumn({
     name: 'updated_at',
-    type: 'timestamp'
+    type: 'timestamp',
   })
   updatedAt!: Date;
 }
@@ -16,7 +16,7 @@ export abstract class UpdateableBaseEntity extends CreatedOnlyBaseEntity impleme
   @AutoMap()
   @UpdateDateColumn({
     name: 'updated_at',
-    type: 'timestamp'
+    type: 'timestamp',
   })
   updatedAt!: Date;
 }
