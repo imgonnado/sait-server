@@ -4,5 +4,5 @@ import { EntityRepository } from 'typeorm';
 
 import { CustomRepository } from '~/db/typeorm-ex.decorator';
 
-@CustomRepository(ProjectPermitEntity)
+@EntityRepository(ProjectPermitEntity)
 export class ProjectPermitRepository extends BaseRepository<ProjectPermitEntity> {}

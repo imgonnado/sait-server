@@ -1,0 +1,3464 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input AddJobSkillsToJobInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input AddJobsToJobCategoryInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input AddNoticesToAdminuserInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input AddProfileCareersToProfileInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input AddProfileSkillsToProfileInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input AddProfilesToUserInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input AddProjectBookmarksToUserInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input AddProjectImagesToProjectInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input AddProjectKeywordsToProjectInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input AddProjectMemberOutsToProjectInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input AddProjectMemberOutsToUserInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input AddProjectMembersToProfileInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input AddProjectMembersToProjectInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input AddProjectMembersToUserInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input AddProjectPermitsToProjectInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input AddProjectRequiredMembersToProjectInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input AddProjectRequiredSkillsToProjectInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input AddProjectResearchAnswersToProjectResearchInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input AddProjectResearchsToProjectInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input AddProjectReviewsToProjectInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input AddProjectReviewsToUserInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input AddUserInterestKeywordsToUserInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+type Adminuser {
+  createdAt: DateTime!
+  email: String!
+  id: ID
+  image: String
+  loginType: Float
+  name: String!
+  nickname: String
+  notices(
+    """Specify to filter the records returned."""
+    filter: NoticeFilter = {}
+
+    """Specify to sort results."""
+    sorting: [NoticeSort!] = []
+  ): [Notice!]!
+  password: String!
+}
+
+type AdminuserAggregateGroupBy {
+  id: ID
+}
+
+type AdminuserConnection {
+  """Array of nodes."""
+  nodes: [Adminuser!]!
+
+  """Paging information"""
+  pageInfo: OffsetPageInfo!
+
+  """Fetch total count of records"""
+  totalCount: Int!
+}
+
+type AdminuserCountAggregate {
+  id: Int
+}
+
+type AdminuserDeleteResponse {
+  createdAt: DateTime
+  email: String
+  id: ID
+  image: String
+  loginType: Float
+  name: String
+  nickname: String
+  password: String
+}
+
+input AdminuserFilter {
+  and: [AdminuserFilter!]
+  id: IDFilterComparison
+  or: [AdminuserFilter!]
+}
+
+input AdminuserInput {
+  email: String!
+  image: String
+  loginType: Float
+  name: String!
+  nickname: String
+  password: String!
+}
+
+type AdminuserMaxAggregate {
+  id: ID
+}
+
+type AdminuserMinAggregate {
+  id: ID
+}
+
+input AdminuserSort {
+  direction: SortDirection!
+  field: AdminuserSortFields!
+  nulls: SortNulls
+}
+
+enum AdminuserSortFields {
+  id
+}
+
+type Alert {
+  alertType: AlertType
+  createdAt: DateTime!
+  id: ID
+  msg: String
+  projectId: String
+  readFlag: Flag
+  targetUserId: String
+  userId: String!
+}
+
+type AlertAggregateGroupBy {
+  id: ID
+}
+
+type AlertConnection {
+  """Array of nodes."""
+  nodes: [Alert!]!
+
+  """Paging information"""
+  pageInfo: OffsetPageInfo!
+
+  """Fetch total count of records"""
+  totalCount: Int!
+}
+
+type AlertCountAggregate {
+  id: Int
+}
+
+type AlertDeleteResponse {
+  alertType: AlertType
+  createdAt: DateTime
+  id: ID
+  msg: String
+  projectId: String
+  readFlag: Flag
+  targetUserId: String
+  userId: String
+}
+
+input AlertFilter {
+  and: [AlertFilter!]
+  id: IDFilterComparison
+  or: [AlertFilter!]
+}
+
+input AlertInput {
+  alertType: AlertType = general
+  msg: String
+  projectId: String
+  readFlag: Flag = N
+  targetUserId: String
+  userId: String!
+}
+
+type AlertMaxAggregate {
+  id: ID
+}
+
+type AlertMinAggregate {
+  id: ID
+}
+
+input AlertSort {
+  direction: SortDirection!
+  field: AlertSortFields!
+  nulls: SortNulls
+}
+
+enum AlertSortFields {
+  id
+}
+
+enum AlertType {
+  general
+  keyword
+  new_user
+  project_accept
+  project_hold
+  project_progress
+  project_success
+}
+
+enum BoardCategoryType {
+  event
+  notice
+}
+
+enum CategoryType {
+  hobby
+  junior
+  rapid
+  senior
+}
+
+input CreateAdminuserInput {
+  email: String!
+  image: String
+  loginType: Float
+  name: String!
+  nickname: String
+  password: String!
+}
+
+input CreateAlertInput {
+  alertType: AlertType = general
+  msg: String
+  projectId: String
+  readFlag: Flag = N
+  targetUserId: String
+  userId: String!
+}
+
+input CreateJobCategoryInput {
+  categoryName: String!
+  parentId: String
+  priority: Float = 0
+}
+
+input CreateJobInput {
+  jobCategoryId: String
+  jobCode: String
+  jobTitle: String!
+}
+
+input CreateJobSkillInput {
+  description: String
+  image: String
+  jobId: String
+  skillName: String
+}
+
+input CreateNoticeInput {
+  adminuserId: String!
+  category: BoardCategoryType = notice
+  content: String
+  subject: String
+}
+
+input CreateOneAdminuserInput {
+  adminuser: CreateAdminuserInput!
+}
+
+input CreateOneAlertInput {
+  alert: CreateAlertInput!
+}
+
+input CreateOneJobCategoryInput {
+  jobCategory: CreateJobCategoryInput!
+}
+
+input CreateOneJobInput {
+  job: CreateJobInput!
+}
+
+input CreateOneJobSkillInput {
+  jobSkill: CreateJobSkillInput!
+}
+
+input CreateOneNoticeInput {
+  notice: CreateNoticeInput!
+}
+
+input CreateOneProfileCareerInput {
+  profileCareer: CreateProfileCareerInput!
+}
+
+input CreateOneProfileInput {
+  profile: CreateProfileInput!
+}
+
+input CreateOneProfileSkillInput {
+  profileSkill: CreateProfileSkillInput!
+}
+
+input CreateOneProjectBookmarkInput {
+  projectBookmark: CreateProjectBookmarkInput!
+}
+
+input CreateOneProjectImageInput {
+  projectImage: CreateProjectImageInput!
+}
+
+input CreateOneProjectInput {
+  project: CreateProjectInput!
+}
+
+input CreateOneProjectKeywordInput {
+  projectKeyword: CreateProjectKeywordInput!
+}
+
+input CreateOneProjectMemberInput {
+  projectMember: CreateProjectMemberInput!
+}
+
+input CreateOneProjectMemberOutInput {
+  projectMemberOut: CreateProjectMemberOutInput!
+}
+
+input CreateOneProjectPermitInput {
+  projectPermit: CreateProjectPermitInput!
+}
+
+input CreateOneProjectRequiredMemberInput {
+  projectRequiredMember: CreateProjectRequiredMemberInput!
+}
+
+input CreateOneProjectRequiredSkillInput {
+  projectRequiredSkill: CreateProjectRequiredSkillInput!
+}
+
+input CreateOneProjectResearchAnswerInput {
+  projectResearchAnswer: CreateProjectResearchAnswerInput!
+}
+
+input CreateOneProjectResearchInput {
+  projectResearch: CreateProjectResearchInput!
+}
+
+input CreateOneProjectReviewInput {
+  projectReview: CreateProjectReviewInput!
+}
+
+input CreateOneUserInput {
+  user: CreateUserInput!
+}
+
+input CreateOneUserInterestKeywordInput {
+  userInterestKeyword: CreateUserInterestKeywordInput!
+}
+
+input CreateProfileCareerInput {
+  careerMonths: Float = 1
+  description: String
+  profileId: String!
+  title: String!
+  urls: JSON
+}
+
+input CreateProfileInput {
+  default: Flag = N
+  introduction: String
+  jobId: String!
+  userId: String!
+}
+
+input CreateProfileSkillInput {
+  jobSkillId: String!
+  profileId: String!
+}
+
+input CreateProjectBookmarkInput {
+  projectId: String!
+  userId: String
+}
+
+input CreateProjectImageInput {
+  image: String!
+  projectId: String!
+}
+
+input CreateProjectInput {
+  bookmarkCount: Float = 0
+  category: CategoryType = junior
+  description: String
+  directLink: String
+  hitCount: Float = 0
+  image: String
+  location: String
+  locationCode: String
+  onoff: OnoffType = onoff
+  projectTitle: String
+  rate: String = "0"
+  recruitStartAt: DateTime
+  status: StatusType = recruit
+}
+
+input CreateProjectKeywordInput {
+  keyword: String!
+  projectId: String!
+}
+
+input CreateProjectMemberInput {
+  jobCode: String
+  profileId: String!
+  projectId: String!
+  role: String = "member"
+  status: String = "waiting"
+  userId: String!
+}
+
+input CreateProjectMemberOutInput {
+  description: String
+  projectId: String!
+  projectLeaderUserId: String
+  reasonType: ReasonType = denied
+  userId: String!
+}
+
+input CreateProjectPermitInput {
+  adminuserId: String
+  projectId: String!
+}
+
+input CreateProjectRequiredMemberInput {
+  jobCount: Float = 0
+  jobId: String
+  projectId: String!
+}
+
+input CreateProjectRequiredSkillInput {
+  jobSkillId: String!
+  projectId: String!
+}
+
+input CreateProjectResearchAnswerInput {
+  answer: String
+  projectResearchId: String!
+  userId: String!
+}
+
+input CreateProjectResearchInput {
+  priority: Float
+  projectId: String!
+  title: String
+}
+
+input CreateProjectReviewInput {
+  feedback: String
+  projectId: String!
+  score: Float = 1
+  targetUserId: String
+  userId: String!
+}
+
+input CreateUserInput {
+  email: String!
+  image: String
+  loginType: Float
+  name: String!
+  nickname: String
+  password: String!
+}
+
+input CreateUserInterestKeywordInput {
+  keyword: String!
+  userId: String!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+input DeleteOneAdminuserInput {
+  """The id of the record to delete."""
+  id: ID!
+}
+
+input DeleteOneAlertInput {
+  """The id of the record to delete."""
+  id: ID!
+}
+
+input DeleteOneJobCategoryInput {
+  """The id of the record to delete."""
+  id: ID!
+}
+
+input DeleteOneJobInput {
+  """The id of the record to delete."""
+  id: ID!
+}
+
+input DeleteOneJobSkillInput {
+  """The id of the record to delete."""
+  id: ID!
+}
+
+input DeleteOneNoticeInput {
+  """The id of the record to delete."""
+  id: ID!
+}
+
+input DeleteOneProfileCareerInput {
+  """The id of the record to delete."""
+  id: ID!
+}
+
+input DeleteOneProfileInput {
+  """The id of the record to delete."""
+  id: ID!
+}
+
+input DeleteOneProfileSkillInput {
+  """The id of the record to delete."""
+  id: ID!
+}
+
+input DeleteOneProjectBookmarkInput {
+  """The id of the record to delete."""
+  id: ID!
+}
+
+input DeleteOneProjectImageInput {
+  """The id of the record to delete."""
+  id: ID!
+}
+
+input DeleteOneProjectInput {
+  """The id of the record to delete."""
+  id: ID!
+}
+
+input DeleteOneProjectKeywordInput {
+  """The id of the record to delete."""
+  id: ID!
+}
+
+input DeleteOneProjectMemberInput {
+  """The id of the record to delete."""
+  id: ID!
+}
+
+input DeleteOneProjectMemberOutInput {
+  """The id of the record to delete."""
+  id: ID!
+}
+
+input DeleteOneProjectPermitInput {
+  """The id of the record to delete."""
+  id: ID!
+}
+
+input DeleteOneProjectRequiredMemberInput {
+  """The id of the record to delete."""
+  id: ID!
+}
+
+input DeleteOneProjectRequiredSkillInput {
+  """The id of the record to delete."""
+  id: ID!
+}
+
+input DeleteOneProjectResearchAnswerInput {
+  """The id of the record to delete."""
+  id: ID!
+}
+
+input DeleteOneProjectResearchInput {
+  """The id of the record to delete."""
+  id: ID!
+}
+
+input DeleteOneProjectReviewInput {
+  """The id of the record to delete."""
+  id: ID!
+}
+
+input DeleteOneUserInput {
+  """The id of the record to delete."""
+  id: ID!
+}
+
+input DeleteOneUserInterestKeywordInput {
+  """The id of the record to delete."""
+  id: ID!
+}
+
+"""Y or N"""
+enum Flag {
+  N
+  Y
+}
+
+input IDFilterComparison {
+  eq: ID
+  gt: ID
+  gte: ID
+  iLike: ID
+  in: [ID!]
+  is: Boolean
+  isNot: Boolean
+  like: ID
+  lt: ID
+  lte: ID
+  neq: ID
+  notILike: ID
+  notIn: [ID!]
+  notLike: ID
+}
+
+"""
+The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSON
+
+type Job {
+  createdAt: DateTime!
+  id: ID
+  jobCategoryId: String
+  jobCode: String
+  jobSkills(
+    """Specify to filter the records returned."""
+    filter: JobSkillFilter = {}
+
+    """Specify to sort results."""
+    sorting: [JobSkillSort!] = []
+  ): [JobSkill!]!
+  jobTitle: String!
+}
+
+type JobAggregateGroupBy {
+  id: ID
+}
+
+type JobCategory {
+  categoryName: String!
+  createdAt: DateTime!
+  id: ID
+  jobs(
+    """Specify to filter the records returned."""
+    filter: JobFilter = {}
+
+    """Specify to sort results."""
+    sorting: [JobSort!] = []
+  ): [Job!]!
+  parentId: String
+  priority: Float
+}
+
+type JobCategoryAggregateGroupBy {
+  id: ID
+}
+
+type JobCategoryConnection {
+  """Array of nodes."""
+  nodes: [JobCategory!]!
+
+  """Paging information"""
+  pageInfo: OffsetPageInfo!
+
+  """Fetch total count of records"""
+  totalCount: Int!
+}
+
+type JobCategoryCountAggregate {
+  id: Int
+}
+
+type JobCategoryDeleteResponse {
+  categoryName: String
+  createdAt: DateTime
+  id: ID
+  parentId: String
+  priority: Float
+}
+
+input JobCategoryFilter {
+  and: [JobCategoryFilter!]
+  id: IDFilterComparison
+  or: [JobCategoryFilter!]
+}
+
+input JobCategoryInput {
+  categoryName: String!
+  parentId: String
+  priority: Float = 0
+}
+
+type JobCategoryMaxAggregate {
+  id: ID
+}
+
+type JobCategoryMinAggregate {
+  id: ID
+}
+
+input JobCategorySort {
+  direction: SortDirection!
+  field: JobCategorySortFields!
+  nulls: SortNulls
+}
+
+enum JobCategorySortFields {
+  id
+}
+
+type JobConnection {
+  """Array of nodes."""
+  nodes: [Job!]!
+
+  """Paging information"""
+  pageInfo: OffsetPageInfo!
+
+  """Fetch total count of records"""
+  totalCount: Int!
+}
+
+type JobCountAggregate {
+  id: Int
+}
+
+type JobDeleteResponse {
+  createdAt: DateTime
+  id: ID
+  jobCategoryId: String
+  jobCode: String
+  jobTitle: String
+}
+
+input JobFilter {
+  and: [JobFilter!]
+  id: IDFilterComparison
+  or: [JobFilter!]
+}
+
+input JobInput {
+  jobCategoryId: String
+  jobCode: String
+  jobTitle: String!
+}
+
+type JobMaxAggregate {
+  id: ID
+}
+
+type JobMinAggregate {
+  id: ID
+}
+
+type JobSkill {
+  createdAt: DateTime!
+  description: String
+  id: ID
+  image: String
+  jobId: String
+  skillName: String
+}
+
+type JobSkillAggregateGroupBy {
+  id: ID
+}
+
+type JobSkillConnection {
+  """Array of nodes."""
+  nodes: [JobSkill!]!
+
+  """Paging information"""
+  pageInfo: OffsetPageInfo!
+
+  """Fetch total count of records"""
+  totalCount: Int!
+}
+
+type JobSkillCountAggregate {
+  id: Int
+}
+
+type JobSkillDeleteResponse {
+  createdAt: DateTime
+  description: String
+  id: ID
+  image: String
+  jobId: String
+  skillName: String
+}
+
+input JobSkillFilter {
+  and: [JobSkillFilter!]
+  id: IDFilterComparison
+  or: [JobSkillFilter!]
+}
+
+input JobSkillInput {
+  description: String
+  image: String
+  jobId: String
+  skillName: String
+}
+
+type JobSkillMaxAggregate {
+  id: ID
+}
+
+type JobSkillMinAggregate {
+  id: ID
+}
+
+input JobSkillSort {
+  direction: SortDirection!
+  field: JobSkillSortFields!
+  nulls: SortNulls
+}
+
+enum JobSkillSortFields {
+  id
+}
+
+input JobSort {
+  direction: SortDirection!
+  field: JobSortFields!
+  nulls: SortNulls
+}
+
+enum JobSortFields {
+  id
+}
+
+type Mutation {
+  addJobSkillsToJob(input: AddJobSkillsToJobInput!): Job!
+  addJobsToJobCategory(input: AddJobsToJobCategoryInput!): JobCategory!
+  addNoticesToAdminuser(input: AddNoticesToAdminuserInput!): Adminuser!
+  addProfileCareersToProfile(input: AddProfileCareersToProfileInput!): Profile!
+  addProfileSkillsToProfile(input: AddProfileSkillsToProfileInput!): Profile!
+  addProfilesToUser(input: AddProfilesToUserInput!): User!
+  addProjectBookmarksToUser(input: AddProjectBookmarksToUserInput!): User!
+  addProjectImagesToProject(input: AddProjectImagesToProjectInput!): Project!
+  addProjectKeywordsToProject(input: AddProjectKeywordsToProjectInput!): Project!
+  addProjectMemberOutsToProject(input: AddProjectMemberOutsToProjectInput!): Project!
+  addProjectMemberOutsToUser(input: AddProjectMemberOutsToUserInput!): User!
+  addProjectMembersToProfile(input: AddProjectMembersToProfileInput!): Profile!
+  addProjectMembersToProject(input: AddProjectMembersToProjectInput!): Project!
+  addProjectMembersToUser(input: AddProjectMembersToUserInput!): User!
+  addProjectPermitsToProject(input: AddProjectPermitsToProjectInput!): Project!
+  addProjectRequiredMembersToProject(input: AddProjectRequiredMembersToProjectInput!): Project!
+  addProjectRequiredSkillsToProject(input: AddProjectRequiredSkillsToProjectInput!): Project!
+  addProjectResearchAnswersToProjectResearch(input: AddProjectResearchAnswersToProjectResearchInput!): ProjectResearch!
+  addProjectResearchsToProject(input: AddProjectResearchsToProjectInput!): Project!
+  addProjectReviewsToProject(input: AddProjectReviewsToProjectInput!): Project!
+  addProjectReviewsToUser(input: AddProjectReviewsToUserInput!): User!
+  addUserInterestKeywordsToUser(input: AddUserInterestKeywordsToUserInput!): User!
+  createOneAdminuser(input: CreateOneAdminuserInput!): Adminuser!
+  createOneAlert(input: CreateOneAlertInput!): Alert!
+  createOneJob(input: CreateOneJobInput!): Job!
+  createOneJobCategory(input: CreateOneJobCategoryInput!): JobCategory!
+  createOneJobSkill(input: CreateOneJobSkillInput!): JobSkill!
+  createOneNotice(input: CreateOneNoticeInput!): Notice!
+  createOneProfile(input: CreateOneProfileInput!): Profile!
+  createOneProfileCareer(input: CreateOneProfileCareerInput!): ProfileCareer!
+  createOneProfileSkill(input: CreateOneProfileSkillInput!): ProfileSkill!
+  createOneProject(input: CreateOneProjectInput!): Project!
+  createOneProjectBookmark(input: CreateOneProjectBookmarkInput!): ProjectBookmark!
+  createOneProjectImage(input: CreateOneProjectImageInput!): ProjectImage!
+  createOneProjectKeyword(input: CreateOneProjectKeywordInput!): ProjectKeyword!
+  createOneProjectMember(input: CreateOneProjectMemberInput!): ProjectMember!
+  createOneProjectMemberOut(input: CreateOneProjectMemberOutInput!): ProjectMemberOut!
+  createOneProjectPermit(input: CreateOneProjectPermitInput!): ProjectPermit!
+  createOneProjectRequiredMember(input: CreateOneProjectRequiredMemberInput!): ProjectRequiredMember!
+  createOneProjectRequiredSkill(input: CreateOneProjectRequiredSkillInput!): ProjectRequiredSkill!
+  createOneProjectResearch(input: CreateOneProjectResearchInput!): ProjectResearch!
+  createOneProjectResearchAnswer(input: CreateOneProjectResearchAnswerInput!): ProjectResearchAnswer!
+  createOneProjectReview(input: CreateOneProjectReviewInput!): ProjectReview!
+  createOneUser(input: CreateOneUserInput!): User!
+  createOneUserInterestKeyword(input: CreateOneUserInterestKeywordInput!): UserInterestKeyword!
+  deleteOneAdminuser(input: DeleteOneAdminuserInput!): AdminuserDeleteResponse!
+  deleteOneAlert(input: DeleteOneAlertInput!): AlertDeleteResponse!
+  deleteOneJob(input: DeleteOneJobInput!): JobDeleteResponse!
+  deleteOneJobCategory(input: DeleteOneJobCategoryInput!): JobCategoryDeleteResponse!
+  deleteOneJobSkill(input: DeleteOneJobSkillInput!): JobSkillDeleteResponse!
+  deleteOneNotice(input: DeleteOneNoticeInput!): NoticeDeleteResponse!
+  deleteOneProfile(input: DeleteOneProfileInput!): ProfileDeleteResponse!
+  deleteOneProfileCareer(input: DeleteOneProfileCareerInput!): ProfileCareerDeleteResponse!
+  deleteOneProfileSkill(input: DeleteOneProfileSkillInput!): ProfileSkillDeleteResponse!
+  deleteOneProject(input: DeleteOneProjectInput!): ProjectDeleteResponse!
+  deleteOneProjectBookmark(input: DeleteOneProjectBookmarkInput!): ProjectBookmarkDeleteResponse!
+  deleteOneProjectImage(input: DeleteOneProjectImageInput!): ProjectImageDeleteResponse!
+  deleteOneProjectKeyword(input: DeleteOneProjectKeywordInput!): ProjectKeywordDeleteResponse!
+  deleteOneProjectMember(input: DeleteOneProjectMemberInput!): ProjectMemberDeleteResponse!
+  deleteOneProjectMemberOut(input: DeleteOneProjectMemberOutInput!): ProjectMemberOutDeleteResponse!
+  deleteOneProjectPermit(input: DeleteOneProjectPermitInput!): ProjectPermitDeleteResponse!
+  deleteOneProjectRequiredMember(input: DeleteOneProjectRequiredMemberInput!): ProjectRequiredMemberDeleteResponse!
+  deleteOneProjectRequiredSkill(input: DeleteOneProjectRequiredSkillInput!): ProjectRequiredSkillDeleteResponse!
+  deleteOneProjectResearch(input: DeleteOneProjectResearchInput!): ProjectResearchDeleteResponse!
+  deleteOneProjectResearchAnswer(input: DeleteOneProjectResearchAnswerInput!): ProjectResearchAnswerDeleteResponse!
+  deleteOneProjectReview(input: DeleteOneProjectReviewInput!): ProjectReviewDeleteResponse!
+  deleteOneUser(input: DeleteOneUserInput!): UserDeleteResponse!
+  deleteOneUserInterestKeyword(input: DeleteOneUserInterestKeywordInput!): UserInterestKeywordDeleteResponse!
+  removeJobSkillsFromJob(input: RemoveJobSkillsFromJobInput!): Job!
+  removeJobsFromJobCategory(input: RemoveJobsFromJobCategoryInput!): JobCategory!
+  removeNoticesFromAdminuser(input: RemoveNoticesFromAdminuserInput!): Adminuser!
+  removeProfileCareersFromProfile(input: RemoveProfileCareersFromProfileInput!): Profile!
+  removeProfileSkillsFromProfile(input: RemoveProfileSkillsFromProfileInput!): Profile!
+  removeProfilesFromUser(input: RemoveProfilesFromUserInput!): User!
+  removeProjectBookmarksFromUser(input: RemoveProjectBookmarksFromUserInput!): User!
+  removeProjectImagesFromProject(input: RemoveProjectImagesFromProjectInput!): Project!
+  removeProjectKeywordsFromProject(input: RemoveProjectKeywordsFromProjectInput!): Project!
+  removeProjectMemberOutsFromProject(input: RemoveProjectMemberOutsFromProjectInput!): Project!
+  removeProjectMemberOutsFromUser(input: RemoveProjectMemberOutsFromUserInput!): User!
+  removeProjectMembersFromProfile(input: RemoveProjectMembersFromProfileInput!): Profile!
+  removeProjectMembersFromProject(input: RemoveProjectMembersFromProjectInput!): Project!
+  removeProjectMembersFromUser(input: RemoveProjectMembersFromUserInput!): User!
+  removeProjectPermitsFromProject(input: RemoveProjectPermitsFromProjectInput!): Project!
+  removeProjectRequiredMembersFromProject(input: RemoveProjectRequiredMembersFromProjectInput!): Project!
+  removeProjectRequiredSkillsFromProject(input: RemoveProjectRequiredSkillsFromProjectInput!): Project!
+  removeProjectResearchAnswersFromProjectResearch(input: RemoveProjectResearchAnswersFromProjectResearchInput!): ProjectResearch!
+  removeProjectResearchsFromProject(input: RemoveProjectResearchsFromProjectInput!): Project!
+  removeProjectReviewsFromProject(input: RemoveProjectReviewsFromProjectInput!): Project!
+  removeProjectReviewsFromUser(input: RemoveProjectReviewsFromUserInput!): User!
+  removeUserInterestKeywordsFromUser(input: RemoveUserInterestKeywordsFromUserInput!): User!
+  setJobSkillsOnJob(input: SetJobSkillsOnJobInput!): Job!
+  setJobsOnJobCategory(input: SetJobsOnJobCategoryInput!): JobCategory!
+  setNoticesOnAdminuser(input: SetNoticesOnAdminuserInput!): Adminuser!
+  setProfileCareersOnProfile(input: SetProfileCareersOnProfileInput!): Profile!
+  setProfileSkillsOnProfile(input: SetProfileSkillsOnProfileInput!): Profile!
+  setProfilesOnUser(input: SetProfilesOnUserInput!): User!
+  setProjectBookmarksOnUser(input: SetProjectBookmarksOnUserInput!): User!
+  setProjectImagesOnProject(input: SetProjectImagesOnProjectInput!): Project!
+  setProjectKeywordsOnProject(input: SetProjectKeywordsOnProjectInput!): Project!
+  setProjectMemberOutsOnProject(input: SetProjectMemberOutsOnProjectInput!): Project!
+  setProjectMemberOutsOnUser(input: SetProjectMemberOutsOnUserInput!): User!
+  setProjectMembersOnProfile(input: SetProjectMembersOnProfileInput!): Profile!
+  setProjectMembersOnProject(input: SetProjectMembersOnProjectInput!): Project!
+  setProjectMembersOnUser(input: SetProjectMembersOnUserInput!): User!
+  setProjectPermitsOnProject(input: SetProjectPermitsOnProjectInput!): Project!
+  setProjectRequiredMembersOnProject(input: SetProjectRequiredMembersOnProjectInput!): Project!
+  setProjectRequiredSkillsOnProject(input: SetProjectRequiredSkillsOnProjectInput!): Project!
+  setProjectResearchAnswersOnProjectResearch(input: SetProjectResearchAnswersOnProjectResearchInput!): ProjectResearch!
+  setProjectResearchsOnProject(input: SetProjectResearchsOnProjectInput!): Project!
+  setProjectReviewsOnProject(input: SetProjectReviewsOnProjectInput!): Project!
+  setProjectReviewsOnUser(input: SetProjectReviewsOnUserInput!): User!
+  setUserInterestKeywordsOnUser(input: SetUserInterestKeywordsOnUserInput!): User!
+  updateOneAdminuser(input: UpdateOneAdminuserInput!): Adminuser!
+  updateOneAlert(input: UpdateOneAlertInput!): Alert!
+  updateOneJob(input: UpdateOneJobInput!): Job!
+  updateOneJobCategory(input: UpdateOneJobCategoryInput!): JobCategory!
+  updateOneJobSkill(input: UpdateOneJobSkillInput!): JobSkill!
+  updateOneNotice(input: UpdateOneNoticeInput!): Notice!
+  updateOneProfile(input: UpdateOneProfileInput!): Profile!
+  updateOneProfileCareer(input: UpdateOneProfileCareerInput!): ProfileCareer!
+  updateOneProfileSkill(input: UpdateOneProfileSkillInput!): ProfileSkill!
+  updateOneProject(input: UpdateOneProjectInput!): Project!
+  updateOneProjectBookmark(input: UpdateOneProjectBookmarkInput!): ProjectBookmark!
+  updateOneProjectImage(input: UpdateOneProjectImageInput!): ProjectImage!
+  updateOneProjectKeyword(input: UpdateOneProjectKeywordInput!): ProjectKeyword!
+  updateOneProjectMember(input: UpdateOneProjectMemberInput!): ProjectMember!
+  updateOneProjectMemberOut(input: UpdateOneProjectMemberOutInput!): ProjectMemberOut!
+  updateOneProjectPermit(input: UpdateOneProjectPermitInput!): ProjectPermit!
+  updateOneProjectRequiredMember(input: UpdateOneProjectRequiredMemberInput!): ProjectRequiredMember!
+  updateOneProjectRequiredSkill(input: UpdateOneProjectRequiredSkillInput!): ProjectRequiredSkill!
+  updateOneProjectResearch(input: UpdateOneProjectResearchInput!): ProjectResearch!
+  updateOneProjectResearchAnswer(input: UpdateOneProjectResearchAnswerInput!): ProjectResearchAnswer!
+  updateOneProjectReview(input: UpdateOneProjectReviewInput!): ProjectReview!
+  updateOneUser(input: UpdateOneUserInput!): User!
+  updateOneUserInterestKeyword(input: UpdateOneUserInterestKeywordInput!): UserInterestKeyword!
+}
+
+type Notice {
+  adminuserId: String!
+  category: BoardCategoryType
+  content: String
+  createdAt: DateTime!
+  id: ID
+  subject: String
+}
+
+type NoticeAggregateGroupBy {
+  id: ID
+}
+
+type NoticeConnection {
+  """Array of nodes."""
+  nodes: [Notice!]!
+
+  """Paging information"""
+  pageInfo: OffsetPageInfo!
+
+  """Fetch total count of records"""
+  totalCount: Int!
+}
+
+type NoticeCountAggregate {
+  id: Int
+}
+
+type NoticeDeleteResponse {
+  adminuserId: String
+  category: BoardCategoryType
+  content: String
+  createdAt: DateTime
+  id: ID
+  subject: String
+}
+
+input NoticeFilter {
+  and: [NoticeFilter!]
+  id: IDFilterComparison
+  or: [NoticeFilter!]
+}
+
+input NoticeInput {
+  adminuserId: String!
+  category: BoardCategoryType = notice
+  content: String
+  subject: String
+}
+
+type NoticeMaxAggregate {
+  id: ID
+}
+
+type NoticeMinAggregate {
+  id: ID
+}
+
+input NoticeSort {
+  direction: SortDirection!
+  field: NoticeSortFields!
+  nulls: SortNulls
+}
+
+enum NoticeSortFields {
+  id
+}
+
+type OffsetPageInfo {
+  """true if paging forward and there are more records."""
+  hasNextPage: Boolean
+
+  """true if paging backwards and there are more records."""
+  hasPreviousPage: Boolean
+}
+
+input OffsetPaging {
+  """Limit the number of records returned"""
+  limit: Int
+
+  """Offset to start returning records from"""
+  offset: Int
+}
+
+enum OnoffType {
+  off
+  on
+  onoff
+}
+
+type Profile {
+  createdAt: DateTime!
+  default: Flag
+  id: ID
+  introduction: String
+  jobId: String!
+  profileCareers(
+    """Specify to filter the records returned."""
+    filter: ProfileCareerFilter = {}
+
+    """Specify to sort results."""
+    sorting: [ProfileCareerSort!] = []
+  ): [ProfileCareer!]!
+  profileSkills(
+    """Specify to filter the records returned."""
+    filter: ProfileSkillFilter = {}
+
+    """Specify to sort results."""
+    sorting: [ProfileSkillSort!] = []
+  ): [ProfileSkill!]!
+  projectMembers(
+    """Specify to filter the records returned."""
+    filter: ProjectMemberFilter = {}
+
+    """Specify to sort results."""
+    sorting: [ProjectMemberSort!] = []
+  ): [ProjectMember!]!
+  userId: String!
+}
+
+type ProfileAggregateGroupBy {
+  id: ID
+}
+
+type ProfileCareer {
+  careerMonths: Float
+  createdAt: DateTime!
+  description: String
+  id: ID
+  profileId: String!
+  title: String!
+  urls: JSON
+}
+
+type ProfileCareerAggregateGroupBy {
+  id: ID
+}
+
+type ProfileCareerConnection {
+  """Array of nodes."""
+  nodes: [ProfileCareer!]!
+
+  """Paging information"""
+  pageInfo: OffsetPageInfo!
+
+  """Fetch total count of records"""
+  totalCount: Int!
+}
+
+type ProfileCareerCountAggregate {
+  id: Int
+}
+
+type ProfileCareerDeleteResponse {
+  careerMonths: Float
+  createdAt: DateTime
+  description: String
+  id: ID
+  profileId: String
+  title: String
+  urls: JSON
+}
+
+input ProfileCareerFilter {
+  and: [ProfileCareerFilter!]
+  id: IDFilterComparison
+  or: [ProfileCareerFilter!]
+}
+
+input ProfileCareerInput {
+  careerMonths: Float = 1
+  description: String
+  profileId: String!
+  title: String!
+  urls: JSON
+}
+
+type ProfileCareerMaxAggregate {
+  id: ID
+}
+
+type ProfileCareerMinAggregate {
+  id: ID
+}
+
+input ProfileCareerSort {
+  direction: SortDirection!
+  field: ProfileCareerSortFields!
+  nulls: SortNulls
+}
+
+enum ProfileCareerSortFields {
+  id
+}
+
+type ProfileConnection {
+  """Array of nodes."""
+  nodes: [Profile!]!
+
+  """Paging information"""
+  pageInfo: OffsetPageInfo!
+
+  """Fetch total count of records"""
+  totalCount: Int!
+}
+
+type ProfileCountAggregate {
+  id: Int
+}
+
+type ProfileDeleteResponse {
+  createdAt: DateTime
+  default: Flag
+  id: ID
+  introduction: String
+  jobId: String
+  userId: String
+}
+
+input ProfileFilter {
+  and: [ProfileFilter!]
+  id: IDFilterComparison
+  or: [ProfileFilter!]
+}
+
+input ProfileInput {
+  default: Flag = N
+  introduction: String
+  jobId: String!
+  userId: String!
+}
+
+type ProfileMaxAggregate {
+  id: ID
+}
+
+type ProfileMinAggregate {
+  id: ID
+}
+
+type ProfileSkill {
+  createdAt: DateTime!
+  id: ID
+  jobSkillId: String!
+  profileId: String!
+}
+
+type ProfileSkillAggregateGroupBy {
+  id: ID
+}
+
+type ProfileSkillConnection {
+  """Array of nodes."""
+  nodes: [ProfileSkill!]!
+
+  """Paging information"""
+  pageInfo: OffsetPageInfo!
+
+  """Fetch total count of records"""
+  totalCount: Int!
+}
+
+type ProfileSkillCountAggregate {
+  id: Int
+}
+
+type ProfileSkillDeleteResponse {
+  createdAt: DateTime
+  id: ID
+  jobSkillId: String
+  profileId: String
+}
+
+input ProfileSkillFilter {
+  and: [ProfileSkillFilter!]
+  id: IDFilterComparison
+  or: [ProfileSkillFilter!]
+}
+
+input ProfileSkillInput {
+  jobSkillId: String!
+  profileId: String!
+}
+
+type ProfileSkillMaxAggregate {
+  id: ID
+}
+
+type ProfileSkillMinAggregate {
+  id: ID
+}
+
+input ProfileSkillSort {
+  direction: SortDirection!
+  field: ProfileSkillSortFields!
+  nulls: SortNulls
+}
+
+enum ProfileSkillSortFields {
+  id
+}
+
+input ProfileSort {
+  direction: SortDirection!
+  field: ProfileSortFields!
+  nulls: SortNulls
+}
+
+enum ProfileSortFields {
+  id
+}
+
+type Project {
+  bookmarkCount: Float
+  category: CategoryType
+  createdAt: DateTime!
+  description: String
+  directLink: String
+  hitCount: Float
+  id: ID
+  image: String
+  location: String
+  locationCode: String
+  onoff: OnoffType
+  projectImages(
+    """Specify to filter the records returned."""
+    filter: ProjectImageFilter = {}
+
+    """Specify to sort results."""
+    sorting: [ProjectImageSort!] = []
+  ): [ProjectImage!]!
+  projectKeywords(
+    """Specify to filter the records returned."""
+    filter: ProjectKeywordFilter = {}
+
+    """Specify to sort results."""
+    sorting: [ProjectKeywordSort!] = []
+  ): [ProjectKeyword!]!
+  projectMemberOuts(
+    """Specify to filter the records returned."""
+    filter: ProjectMemberOutFilter = {}
+
+    """Specify to sort results."""
+    sorting: [ProjectMemberOutSort!] = []
+  ): [ProjectMemberOut!]!
+  projectMembers(
+    """Specify to filter the records returned."""
+    filter: ProjectMemberFilter = {}
+
+    """Specify to sort results."""
+    sorting: [ProjectMemberSort!] = []
+  ): [ProjectMember!]!
+  projectPermits(
+    """Specify to filter the records returned."""
+    filter: ProjectPermitFilter = {}
+
+    """Specify to sort results."""
+    sorting: [ProjectPermitSort!] = []
+  ): [ProjectPermit!]!
+  projectRequiredMembers(
+    """Specify to filter the records returned."""
+    filter: ProjectRequiredMemberFilter = {}
+
+    """Specify to sort results."""
+    sorting: [ProjectRequiredMemberSort!] = []
+  ): [ProjectRequiredMember!]!
+  projectRequiredSkills(
+    """Specify to filter the records returned."""
+    filter: ProjectRequiredSkillFilter = {}
+
+    """Specify to sort results."""
+    sorting: [ProjectRequiredSkillSort!] = []
+  ): [ProjectRequiredSkill!]!
+  projectResearchs(
+    """Specify to filter the records returned."""
+    filter: ProjectResearchFilter = {}
+
+    """Specify to sort results."""
+    sorting: [ProjectResearchSort!] = []
+  ): [ProjectResearch!]!
+  projectReviews(
+    """Specify to filter the records returned."""
+    filter: ProjectReviewFilter = {}
+
+    """Specify to sort results."""
+    sorting: [ProjectReviewSort!] = []
+  ): [ProjectReview!]!
+  projectTitle: String
+  rate: String!
+  recruitStartAt: DateTime
+  status: StatusType
+}
+
+type ProjectAggregateGroupBy {
+  id: ID
+}
+
+type ProjectBookmark {
+  createdAt: DateTime!
+  id: ID
+  projectId: String!
+  userId: String
+}
+
+type ProjectBookmarkAggregateGroupBy {
+  id: ID
+}
+
+type ProjectBookmarkConnection {
+  """Array of nodes."""
+  nodes: [ProjectBookmark!]!
+
+  """Paging information"""
+  pageInfo: OffsetPageInfo!
+
+  """Fetch total count of records"""
+  totalCount: Int!
+}
+
+type ProjectBookmarkCountAggregate {
+  id: Int
+}
+
+type ProjectBookmarkDeleteResponse {
+  createdAt: DateTime
+  id: ID
+  projectId: String
+  userId: String
+}
+
+input ProjectBookmarkFilter {
+  and: [ProjectBookmarkFilter!]
+  id: IDFilterComparison
+  or: [ProjectBookmarkFilter!]
+}
+
+input ProjectBookmarkInput {
+  projectId: String!
+  userId: String
+}
+
+type ProjectBookmarkMaxAggregate {
+  id: ID
+}
+
+type ProjectBookmarkMinAggregate {
+  id: ID
+}
+
+input ProjectBookmarkSort {
+  direction: SortDirection!
+  field: ProjectBookmarkSortFields!
+  nulls: SortNulls
+}
+
+enum ProjectBookmarkSortFields {
+  id
+}
+
+type ProjectConnection {
+  """Array of nodes."""
+  nodes: [Project!]!
+
+  """Paging information"""
+  pageInfo: OffsetPageInfo!
+
+  """Fetch total count of records"""
+  totalCount: Int!
+}
+
+type ProjectCountAggregate {
+  id: Int
+}
+
+type ProjectDeleteResponse {
+  bookmarkCount: Float
+  category: CategoryType
+  createdAt: DateTime
+  description: String
+  directLink: String
+  hitCount: Float
+  id: ID
+  image: String
+  location: String
+  locationCode: String
+  onoff: OnoffType
+  projectTitle: String
+  rate: String
+  recruitStartAt: DateTime
+  status: StatusType
+}
+
+input ProjectFilter {
+  and: [ProjectFilter!]
+  id: IDFilterComparison
+  or: [ProjectFilter!]
+}
+
+type ProjectImage {
+  createdAt: DateTime!
+  id: ID
+  image: String!
+  projectId: String!
+}
+
+type ProjectImageAggregateGroupBy {
+  id: ID
+}
+
+type ProjectImageConnection {
+  """Array of nodes."""
+  nodes: [ProjectImage!]!
+
+  """Paging information"""
+  pageInfo: OffsetPageInfo!
+
+  """Fetch total count of records"""
+  totalCount: Int!
+}
+
+type ProjectImageCountAggregate {
+  id: Int
+}
+
+type ProjectImageDeleteResponse {
+  createdAt: DateTime
+  id: ID
+  image: String
+  projectId: String
+}
+
+input ProjectImageFilter {
+  and: [ProjectImageFilter!]
+  id: IDFilterComparison
+  or: [ProjectImageFilter!]
+}
+
+input ProjectImageInput {
+  image: String!
+  projectId: String!
+}
+
+type ProjectImageMaxAggregate {
+  id: ID
+}
+
+type ProjectImageMinAggregate {
+  id: ID
+}
+
+input ProjectImageSort {
+  direction: SortDirection!
+  field: ProjectImageSortFields!
+  nulls: SortNulls
+}
+
+enum ProjectImageSortFields {
+  id
+}
+
+input ProjectInput {
+  bookmarkCount: Float = 0
+  category: CategoryType = junior
+  description: String
+  directLink: String
+  hitCount: Float = 0
+  image: String
+  location: String
+  locationCode: String
+  onoff: OnoffType = onoff
+  projectTitle: String
+  rate: String = "0"
+  recruitStartAt: DateTime
+  status: StatusType = recruit
+}
+
+type ProjectKeyword {
+  createdAt: DateTime!
+  id: ID
+  keyword: String!
+  projectId: String!
+}
+
+type ProjectKeywordAggregateGroupBy {
+  id: ID
+}
+
+type ProjectKeywordConnection {
+  """Array of nodes."""
+  nodes: [ProjectKeyword!]!
+
+  """Paging information"""
+  pageInfo: OffsetPageInfo!
+
+  """Fetch total count of records"""
+  totalCount: Int!
+}
+
+type ProjectKeywordCountAggregate {
+  id: Int
+}
+
+type ProjectKeywordDeleteResponse {
+  createdAt: DateTime
+  id: ID
+  keyword: String
+  projectId: String
+}
+
+input ProjectKeywordFilter {
+  and: [ProjectKeywordFilter!]
+  id: IDFilterComparison
+  or: [ProjectKeywordFilter!]
+}
+
+input ProjectKeywordInput {
+  keyword: String!
+  projectId: String!
+}
+
+type ProjectKeywordMaxAggregate {
+  id: ID
+}
+
+type ProjectKeywordMinAggregate {
+  id: ID
+}
+
+input ProjectKeywordSort {
+  direction: SortDirection!
+  field: ProjectKeywordSortFields!
+  nulls: SortNulls
+}
+
+enum ProjectKeywordSortFields {
+  id
+}
+
+type ProjectMaxAggregate {
+  id: ID
+}
+
+type ProjectMember {
+  createdAt: DateTime!
+  id: ID
+  jobCode: String
+  profileId: String!
+  projectId: String!
+  role: String
+  status: String
+  userId: String!
+}
+
+type ProjectMemberAggregateGroupBy {
+  id: ID
+}
+
+type ProjectMemberConnection {
+  """Array of nodes."""
+  nodes: [ProjectMember!]!
+
+  """Paging information"""
+  pageInfo: OffsetPageInfo!
+
+  """Fetch total count of records"""
+  totalCount: Int!
+}
+
+type ProjectMemberCountAggregate {
+  id: Int
+}
+
+type ProjectMemberDeleteResponse {
+  createdAt: DateTime
+  id: ID
+  jobCode: String
+  profileId: String
+  projectId: String
+  role: String
+  status: String
+  userId: String
+}
+
+input ProjectMemberFilter {
+  and: [ProjectMemberFilter!]
+  id: IDFilterComparison
+  or: [ProjectMemberFilter!]
+}
+
+input ProjectMemberInput {
+  jobCode: String
+  profileId: String!
+  projectId: String!
+  role: String = "member"
+  status: String = "waiting"
+  userId: String!
+}
+
+type ProjectMemberMaxAggregate {
+  id: ID
+}
+
+type ProjectMemberMinAggregate {
+  id: ID
+}
+
+type ProjectMemberOut {
+  createdAt: DateTime!
+  description: String
+  id: ID
+  projectId: String!
+  projectLeaderUserId: String
+  reasonType: ReasonType
+  userId: String!
+}
+
+type ProjectMemberOutAggregateGroupBy {
+  id: ID
+}
+
+type ProjectMemberOutConnection {
+  """Array of nodes."""
+  nodes: [ProjectMemberOut!]!
+
+  """Paging information"""
+  pageInfo: OffsetPageInfo!
+
+  """Fetch total count of records"""
+  totalCount: Int!
+}
+
+type ProjectMemberOutCountAggregate {
+  id: Int
+}
+
+type ProjectMemberOutDeleteResponse {
+  createdAt: DateTime
+  description: String
+  id: ID
+  projectId: String
+  projectLeaderUserId: String
+  reasonType: ReasonType
+  userId: String
+}
+
+input ProjectMemberOutFilter {
+  and: [ProjectMemberOutFilter!]
+  id: IDFilterComparison
+  or: [ProjectMemberOutFilter!]
+}
+
+input ProjectMemberOutInput {
+  description: String
+  projectId: String!
+  projectLeaderUserId: String
+  reasonType: ReasonType = denied
+  userId: String!
+}
+
+type ProjectMemberOutMaxAggregate {
+  id: ID
+}
+
+type ProjectMemberOutMinAggregate {
+  id: ID
+}
+
+input ProjectMemberOutSort {
+  direction: SortDirection!
+  field: ProjectMemberOutSortFields!
+  nulls: SortNulls
+}
+
+enum ProjectMemberOutSortFields {
+  id
+}
+
+input ProjectMemberSort {
+  direction: SortDirection!
+  field: ProjectMemberSortFields!
+  nulls: SortNulls
+}
+
+enum ProjectMemberSortFields {
+  id
+}
+
+type ProjectMinAggregate {
+  id: ID
+}
+
+type ProjectPermit {
+  adminuserId: String
+  createdAt: DateTime!
+  id: ID
+  projectId: String!
+}
+
+type ProjectPermitAggregateGroupBy {
+  id: ID
+}
+
+type ProjectPermitConnection {
+  """Array of nodes."""
+  nodes: [ProjectPermit!]!
+
+  """Paging information"""
+  pageInfo: OffsetPageInfo!
+
+  """Fetch total count of records"""
+  totalCount: Int!
+}
+
+type ProjectPermitCountAggregate {
+  id: Int
+}
+
+type ProjectPermitDeleteResponse {
+  adminuserId: String
+  createdAt: DateTime
+  id: ID
+  projectId: String
+}
+
+input ProjectPermitFilter {
+  and: [ProjectPermitFilter!]
+  id: IDFilterComparison
+  or: [ProjectPermitFilter!]
+}
+
+input ProjectPermitInput {
+  adminuserId: String
+  projectId: String!
+}
+
+type ProjectPermitMaxAggregate {
+  id: ID
+}
+
+type ProjectPermitMinAggregate {
+  id: ID
+}
+
+input ProjectPermitSort {
+  direction: SortDirection!
+  field: ProjectPermitSortFields!
+  nulls: SortNulls
+}
+
+enum ProjectPermitSortFields {
+  id
+}
+
+type ProjectRequiredMember {
+  createdAt: DateTime!
+  id: ID
+  jobCount: Float
+  jobId: String
+  projectId: String!
+}
+
+type ProjectRequiredMemberAggregateGroupBy {
+  id: ID
+}
+
+type ProjectRequiredMemberConnection {
+  """Array of nodes."""
+  nodes: [ProjectRequiredMember!]!
+
+  """Paging information"""
+  pageInfo: OffsetPageInfo!
+
+  """Fetch total count of records"""
+  totalCount: Int!
+}
+
+type ProjectRequiredMemberCountAggregate {
+  id: Int
+}
+
+type ProjectRequiredMemberDeleteResponse {
+  createdAt: DateTime
+  id: ID
+  jobCount: Float
+  jobId: String
+  projectId: String
+}
+
+input ProjectRequiredMemberFilter {
+  and: [ProjectRequiredMemberFilter!]
+  id: IDFilterComparison
+  or: [ProjectRequiredMemberFilter!]
+}
+
+input ProjectRequiredMemberInput {
+  jobCount: Float = 0
+  jobId: String
+  projectId: String!
+}
+
+type ProjectRequiredMemberMaxAggregate {
+  id: ID
+}
+
+type ProjectRequiredMemberMinAggregate {
+  id: ID
+}
+
+input ProjectRequiredMemberSort {
+  direction: SortDirection!
+  field: ProjectRequiredMemberSortFields!
+  nulls: SortNulls
+}
+
+enum ProjectRequiredMemberSortFields {
+  id
+}
+
+type ProjectRequiredSkill {
+  createdAt: DateTime!
+  id: ID
+  jobSkillId: String!
+  projectId: String!
+}
+
+type ProjectRequiredSkillAggregateGroupBy {
+  id: ID
+}
+
+type ProjectRequiredSkillConnection {
+  """Array of nodes."""
+  nodes: [ProjectRequiredSkill!]!
+
+  """Paging information"""
+  pageInfo: OffsetPageInfo!
+
+  """Fetch total count of records"""
+  totalCount: Int!
+}
+
+type ProjectRequiredSkillCountAggregate {
+  id: Int
+}
+
+type ProjectRequiredSkillDeleteResponse {
+  createdAt: DateTime
+  id: ID
+  jobSkillId: String
+  projectId: String
+}
+
+input ProjectRequiredSkillFilter {
+  and: [ProjectRequiredSkillFilter!]
+  id: IDFilterComparison
+  or: [ProjectRequiredSkillFilter!]
+}
+
+input ProjectRequiredSkillInput {
+  jobSkillId: String!
+  projectId: String!
+}
+
+type ProjectRequiredSkillMaxAggregate {
+  id: ID
+}
+
+type ProjectRequiredSkillMinAggregate {
+  id: ID
+}
+
+input ProjectRequiredSkillSort {
+  direction: SortDirection!
+  field: ProjectRequiredSkillSortFields!
+  nulls: SortNulls
+}
+
+enum ProjectRequiredSkillSortFields {
+  id
+}
+
+type ProjectResearch {
+  createdAt: DateTime!
+  id: ID
+  priority: Float
+  projectId: String!
+  projectResearchAnswers(
+    """Specify to filter the records returned."""
+    filter: ProjectResearchAnswerFilter = {}
+
+    """Specify to sort results."""
+    sorting: [ProjectResearchAnswerSort!] = []
+  ): [ProjectResearchAnswer!]!
+  title: String
+}
+
+type ProjectResearchAggregateGroupBy {
+  id: ID
+}
+
+type ProjectResearchAnswer {
+  answer: String
+  createdAt: DateTime!
+  id: ID
+  projectResearchId: String!
+  userId: String!
+}
+
+type ProjectResearchAnswerAggregateGroupBy {
+  id: ID
+}
+
+type ProjectResearchAnswerConnection {
+  """Array of nodes."""
+  nodes: [ProjectResearchAnswer!]!
+
+  """Paging information"""
+  pageInfo: OffsetPageInfo!
+
+  """Fetch total count of records"""
+  totalCount: Int!
+}
+
+type ProjectResearchAnswerCountAggregate {
+  id: Int
+}
+
+type ProjectResearchAnswerDeleteResponse {
+  answer: String
+  createdAt: DateTime
+  id: ID
+  projectResearchId: String
+  userId: String
+}
+
+input ProjectResearchAnswerFilter {
+  and: [ProjectResearchAnswerFilter!]
+  id: IDFilterComparison
+  or: [ProjectResearchAnswerFilter!]
+}
+
+input ProjectResearchAnswerInput {
+  answer: String
+  projectResearchId: String!
+  userId: String!
+}
+
+type ProjectResearchAnswerMaxAggregate {
+  id: ID
+}
+
+type ProjectResearchAnswerMinAggregate {
+  id: ID
+}
+
+input ProjectResearchAnswerSort {
+  direction: SortDirection!
+  field: ProjectResearchAnswerSortFields!
+  nulls: SortNulls
+}
+
+enum ProjectResearchAnswerSortFields {
+  id
+}
+
+type ProjectResearchConnection {
+  """Array of nodes."""
+  nodes: [ProjectResearch!]!
+
+  """Paging information"""
+  pageInfo: OffsetPageInfo!
+
+  """Fetch total count of records"""
+  totalCount: Int!
+}
+
+type ProjectResearchCountAggregate {
+  id: Int
+}
+
+type ProjectResearchDeleteResponse {
+  createdAt: DateTime
+  id: ID
+  priority: Float
+  projectId: String
+  title: String
+}
+
+input ProjectResearchFilter {
+  and: [ProjectResearchFilter!]
+  id: IDFilterComparison
+  or: [ProjectResearchFilter!]
+}
+
+input ProjectResearchInput {
+  priority: Float
+  projectId: String!
+  title: String
+}
+
+type ProjectResearchMaxAggregate {
+  id: ID
+}
+
+type ProjectResearchMinAggregate {
+  id: ID
+}
+
+input ProjectResearchSort {
+  direction: SortDirection!
+  field: ProjectResearchSortFields!
+  nulls: SortNulls
+}
+
+enum ProjectResearchSortFields {
+  id
+}
+
+type ProjectReview {
+  createdAt: DateTime!
+  feedback: String
+  id: ID
+  projectId: String!
+  score: Float!
+  targetUserId: String
+  userId: String!
+}
+
+type ProjectReviewAggregateGroupBy {
+  id: ID
+}
+
+type ProjectReviewConnection {
+  """Array of nodes."""
+  nodes: [ProjectReview!]!
+
+  """Paging information"""
+  pageInfo: OffsetPageInfo!
+
+  """Fetch total count of records"""
+  totalCount: Int!
+}
+
+type ProjectReviewCountAggregate {
+  id: Int
+}
+
+type ProjectReviewDeleteResponse {
+  createdAt: DateTime
+  feedback: String
+  id: ID
+  projectId: String
+  score: Float
+  targetUserId: String
+  userId: String
+}
+
+input ProjectReviewFilter {
+  and: [ProjectReviewFilter!]
+  id: IDFilterComparison
+  or: [ProjectReviewFilter!]
+}
+
+input ProjectReviewInput {
+  feedback: String
+  projectId: String!
+  score: Float = 1
+  targetUserId: String
+  userId: String!
+}
+
+type ProjectReviewMaxAggregate {
+  id: ID
+}
+
+type ProjectReviewMinAggregate {
+  id: ID
+}
+
+input ProjectReviewSort {
+  direction: SortDirection!
+  field: ProjectReviewSortFields!
+  nulls: SortNulls
+}
+
+enum ProjectReviewSortFields {
+  id
+}
+
+input ProjectSort {
+  direction: SortDirection!
+  field: ProjectSortFields!
+  nulls: SortNulls
+}
+
+enum ProjectSortFields {
+  id
+}
+
+type Query {
+  adminuser(
+    """The id of the record to find."""
+    id: ID!
+  ): Adminuser
+  adminusers(
+    """Specify to filter the records returned."""
+    filter: AdminuserFilter = {}
+
+    """Limit or page results."""
+    paging: OffsetPaging = {limit: 10}
+
+    """Specify to sort results."""
+    sorting: [AdminuserSort!] = []
+  ): AdminuserConnection!
+  alert(
+    """The id of the record to find."""
+    id: ID!
+  ): Alert
+  alerts(
+    """Specify to filter the records returned."""
+    filter: AlertFilter = {}
+
+    """Limit or page results."""
+    paging: OffsetPaging = {limit: 10}
+
+    """Specify to sort results."""
+    sorting: [AlertSort!] = []
+  ): AlertConnection!
+  job(
+    """The id of the record to find."""
+    id: ID!
+  ): Job
+  jobCategories(
+    """Specify to filter the records returned."""
+    filter: JobCategoryFilter = {}
+
+    """Limit or page results."""
+    paging: OffsetPaging = {limit: 10}
+
+    """Specify to sort results."""
+    sorting: [JobCategorySort!] = []
+  ): JobCategoryConnection!
+  jobCategory(
+    """The id of the record to find."""
+    id: ID!
+  ): JobCategory
+  jobSkill(
+    """The id of the record to find."""
+    id: ID!
+  ): JobSkill
+  jobSkills(
+    """Specify to filter the records returned."""
+    filter: JobSkillFilter = {}
+
+    """Limit or page results."""
+    paging: OffsetPaging = {limit: 10}
+
+    """Specify to sort results."""
+    sorting: [JobSkillSort!] = []
+  ): JobSkillConnection!
+  jobs(
+    """Specify to filter the records returned."""
+    filter: JobFilter = {}
+
+    """Limit or page results."""
+    paging: OffsetPaging = {limit: 10}
+
+    """Specify to sort results."""
+    sorting: [JobSort!] = []
+  ): JobConnection!
+  notice(
+    """The id of the record to find."""
+    id: ID!
+  ): Notice
+  notices(
+    """Specify to filter the records returned."""
+    filter: NoticeFilter = {}
+
+    """Limit or page results."""
+    paging: OffsetPaging = {limit: 10}
+
+    """Specify to sort results."""
+    sorting: [NoticeSort!] = []
+  ): NoticeConnection!
+  profile(
+    """The id of the record to find."""
+    id: ID!
+  ): Profile
+  profileCareer(
+    """The id of the record to find."""
+    id: ID!
+  ): ProfileCareer
+  profileCareers(
+    """Specify to filter the records returned."""
+    filter: ProfileCareerFilter = {}
+
+    """Limit or page results."""
+    paging: OffsetPaging = {limit: 10}
+
+    """Specify to sort results."""
+    sorting: [ProfileCareerSort!] = []
+  ): ProfileCareerConnection!
+  profileSkill(
+    """The id of the record to find."""
+    id: ID!
+  ): ProfileSkill
+  profileSkills(
+    """Specify to filter the records returned."""
+    filter: ProfileSkillFilter = {}
+
+    """Limit or page results."""
+    paging: OffsetPaging = {limit: 10}
+
+    """Specify to sort results."""
+    sorting: [ProfileSkillSort!] = []
+  ): ProfileSkillConnection!
+  profiles(
+    """Specify to filter the records returned."""
+    filter: ProfileFilter = {}
+
+    """Limit or page results."""
+    paging: OffsetPaging = {limit: 10}
+
+    """Specify to sort results."""
+    sorting: [ProfileSort!] = []
+  ): ProfileConnection!
+  project(
+    """The id of the record to find."""
+    id: ID!
+  ): Project
+  projectBookmark(
+    """The id of the record to find."""
+    id: ID!
+  ): ProjectBookmark
+  projectBookmarks(
+    """Specify to filter the records returned."""
+    filter: ProjectBookmarkFilter = {}
+
+    """Limit or page results."""
+    paging: OffsetPaging = {limit: 10}
+
+    """Specify to sort results."""
+    sorting: [ProjectBookmarkSort!] = []
+  ): ProjectBookmarkConnection!
+  projectImage(
+    """The id of the record to find."""
+    id: ID!
+  ): ProjectImage
+  projectImages(
+    """Specify to filter the records returned."""
+    filter: ProjectImageFilter = {}
+
+    """Limit or page results."""
+    paging: OffsetPaging = {limit: 10}
+
+    """Specify to sort results."""
+    sorting: [ProjectImageSort!] = []
+  ): ProjectImageConnection!
+  projectKeyword(
+    """The id of the record to find."""
+    id: ID!
+  ): ProjectKeyword
+  projectKeywords(
+    """Specify to filter the records returned."""
+    filter: ProjectKeywordFilter = {}
+
+    """Limit or page results."""
+    paging: OffsetPaging = {limit: 10}
+
+    """Specify to sort results."""
+    sorting: [ProjectKeywordSort!] = []
+  ): ProjectKeywordConnection!
+  projectMember(
+    """The id of the record to find."""
+    id: ID!
+  ): ProjectMember
+  projectMemberOut(
+    """The id of the record to find."""
+    id: ID!
+  ): ProjectMemberOut
+  projectMemberOuts(
+    """Specify to filter the records returned."""
+    filter: ProjectMemberOutFilter = {}
+
+    """Limit or page results."""
+    paging: OffsetPaging = {limit: 10}
+
+    """Specify to sort results."""
+    sorting: [ProjectMemberOutSort!] = []
+  ): ProjectMemberOutConnection!
+  projectMembers(
+    """Specify to filter the records returned."""
+    filter: ProjectMemberFilter = {}
+
+    """Limit or page results."""
+    paging: OffsetPaging = {limit: 10}
+
+    """Specify to sort results."""
+    sorting: [ProjectMemberSort!] = []
+  ): ProjectMemberConnection!
+  projectPermit(
+    """The id of the record to find."""
+    id: ID!
+  ): ProjectPermit
+  projectPermits(
+    """Specify to filter the records returned."""
+    filter: ProjectPermitFilter = {}
+
+    """Limit or page results."""
+    paging: OffsetPaging = {limit: 10}
+
+    """Specify to sort results."""
+    sorting: [ProjectPermitSort!] = []
+  ): ProjectPermitConnection!
+  projectRequiredMember(
+    """The id of the record to find."""
+    id: ID!
+  ): ProjectRequiredMember
+  projectRequiredMembers(
+    """Specify to filter the records returned."""
+    filter: ProjectRequiredMemberFilter = {}
+
+    """Limit or page results."""
+    paging: OffsetPaging = {limit: 10}
+
+    """Specify to sort results."""
+    sorting: [ProjectRequiredMemberSort!] = []
+  ): ProjectRequiredMemberConnection!
+  projectRequiredSkill(
+    """The id of the record to find."""
+    id: ID!
+  ): ProjectRequiredSkill
+  projectRequiredSkills(
+    """Specify to filter the records returned."""
+    filter: ProjectRequiredSkillFilter = {}
+
+    """Limit or page results."""
+    paging: OffsetPaging = {limit: 10}
+
+    """Specify to sort results."""
+    sorting: [ProjectRequiredSkillSort!] = []
+  ): ProjectRequiredSkillConnection!
+  projectResearch(
+    """The id of the record to find."""
+    id: ID!
+  ): ProjectResearch
+  projectResearchAnswer(
+    """The id of the record to find."""
+    id: ID!
+  ): ProjectResearchAnswer
+  projectResearchAnswers(
+    """Specify to filter the records returned."""
+    filter: ProjectResearchAnswerFilter = {}
+
+    """Limit or page results."""
+    paging: OffsetPaging = {limit: 10}
+
+    """Specify to sort results."""
+    sorting: [ProjectResearchAnswerSort!] = []
+  ): ProjectResearchAnswerConnection!
+  projectResearches(
+    """Specify to filter the records returned."""
+    filter: ProjectResearchFilter = {}
+
+    """Limit or page results."""
+    paging: OffsetPaging = {limit: 10}
+
+    """Specify to sort results."""
+    sorting: [ProjectResearchSort!] = []
+  ): ProjectResearchConnection!
+  projectReview(
+    """The id of the record to find."""
+    id: ID!
+  ): ProjectReview
+  projectReviews(
+    """Specify to filter the records returned."""
+    filter: ProjectReviewFilter = {}
+
+    """Limit or page results."""
+    paging: OffsetPaging = {limit: 10}
+
+    """Specify to sort results."""
+    sorting: [ProjectReviewSort!] = []
+  ): ProjectReviewConnection!
+  projects(
+    """Specify to filter the records returned."""
+    filter: ProjectFilter = {}
+
+    """Limit or page results."""
+    paging: OffsetPaging = {limit: 10}
+
+    """Specify to sort results."""
+    sorting: [ProjectSort!] = []
+  ): ProjectConnection!
+  user(
+    """The id of the record to find."""
+    id: ID!
+  ): User
+  userInterestKeyword(
+    """The id of the record to find."""
+    id: ID!
+  ): UserInterestKeyword
+  userInterestKeywords(
+    """Specify to filter the records returned."""
+    filter: UserInterestKeywordFilter = {}
+
+    """Limit or page results."""
+    paging: OffsetPaging = {limit: 10}
+
+    """Specify to sort results."""
+    sorting: [UserInterestKeywordSort!] = []
+  ): UserInterestKeywordConnection!
+  users(
+    """Specify to filter the records returned."""
+    filter: UserFilter = {}
+
+    """Limit or page results."""
+    paging: OffsetPaging = {limit: 10}
+
+    """Specify to sort results."""
+    sorting: [UserSort!] = []
+  ): UserConnection!
+}
+
+enum ReasonType {
+  denied
+  fired
+  giveup
+}
+
+input RemoveJobSkillsFromJobInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input RemoveJobsFromJobCategoryInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input RemoveNoticesFromAdminuserInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input RemoveProfileCareersFromProfileInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input RemoveProfileSkillsFromProfileInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input RemoveProfilesFromUserInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input RemoveProjectBookmarksFromUserInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input RemoveProjectImagesFromProjectInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input RemoveProjectKeywordsFromProjectInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input RemoveProjectMemberOutsFromProjectInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input RemoveProjectMemberOutsFromUserInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input RemoveProjectMembersFromProfileInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input RemoveProjectMembersFromProjectInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input RemoveProjectMembersFromUserInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input RemoveProjectPermitsFromProjectInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input RemoveProjectRequiredMembersFromProjectInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input RemoveProjectRequiredSkillsFromProjectInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input RemoveProjectResearchAnswersFromProjectResearchInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input RemoveProjectResearchsFromProjectInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input RemoveProjectReviewsFromProjectInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input RemoveProjectReviewsFromUserInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input RemoveUserInterestKeywordsFromUserInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input SetJobSkillsOnJobInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input SetJobsOnJobCategoryInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input SetNoticesOnAdminuserInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input SetProfileCareersOnProfileInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input SetProfileSkillsOnProfileInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input SetProfilesOnUserInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input SetProjectBookmarksOnUserInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input SetProjectImagesOnProjectInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input SetProjectKeywordsOnProjectInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input SetProjectMemberOutsOnProjectInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input SetProjectMemberOutsOnUserInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input SetProjectMembersOnProfileInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input SetProjectMembersOnProjectInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input SetProjectMembersOnUserInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input SetProjectPermitsOnProjectInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input SetProjectRequiredMembersOnProjectInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input SetProjectRequiredSkillsOnProjectInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input SetProjectResearchAnswersOnProjectResearchInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input SetProjectResearchsOnProjectInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input SetProjectReviewsOnProjectInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input SetProjectReviewsOnUserInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+input SetUserInterestKeywordsOnUserInput {
+  """The id of the record."""
+  id: ID!
+
+  """The ids of the relations."""
+  relationIds: [ID!]!
+}
+
+"""Sort Directions"""
+enum SortDirection {
+  ASC
+  DESC
+}
+
+"""Sort Nulls Options"""
+enum SortNulls {
+  NULLS_FIRST
+  NULLS_LAST
+}
+
+enum StatusType {
+  complete
+  hold
+  pending
+  progress
+  recruit
+}
+
+input UpdateAdminuserInput {
+  email: String!
+  image: String
+  loginType: Float
+  name: String!
+  nickname: String
+  password: String!
+}
+
+input UpdateAlertInput {
+  alertType: AlertType = general
+  msg: String
+  projectId: String
+  readFlag: Flag = N
+  targetUserId: String
+  userId: String!
+}
+
+input UpdateJobCategoryInput {
+  categoryName: String!
+  parentId: String
+  priority: Float = 0
+}
+
+input UpdateJobInput {
+  jobCategoryId: String
+  jobCode: String
+  jobTitle: String!
+}
+
+input UpdateJobSkillInput {
+  description: String
+  image: String
+  jobId: String
+  skillName: String
+}
+
+input UpdateNoticeInput {
+  adminuserId: String!
+  category: BoardCategoryType = notice
+  content: String
+  subject: String
+}
+
+input UpdateOneAdminuserInput {
+  id: String!
+  update: UpdateAdminuserInput!
+}
+
+input UpdateOneAlertInput {
+  id: String!
+  update: UpdateAlertInput!
+}
+
+input UpdateOneJobCategoryInput {
+  id: String!
+  update: UpdateJobCategoryInput!
+}
+
+input UpdateOneJobInput {
+  id: String!
+  update: UpdateJobInput!
+}
+
+input UpdateOneJobSkillInput {
+  id: String!
+  update: UpdateJobSkillInput!
+}
+
+input UpdateOneNoticeInput {
+  id: String!
+  update: UpdateNoticeInput!
+}
+
+input UpdateOneProfileCareerInput {
+  id: String!
+  update: UpdateProfileCareerInput!
+}
+
+input UpdateOneProfileInput {
+  id: String!
+  update: UpdateProfileInput!
+}
+
+input UpdateOneProfileSkillInput {
+  id: String!
+  update: UpdateProfileSkillInput!
+}
+
+input UpdateOneProjectBookmarkInput {
+  id: String!
+  update: UpdateProjectBookmarkInput!
+}
+
+input UpdateOneProjectImageInput {
+  id: String!
+  update: UpdateProjectImageInput!
+}
+
+input UpdateOneProjectInput {
+  id: String!
+  update: UpdateProjectInput!
+}
+
+input UpdateOneProjectKeywordInput {
+  id: String!
+  update: UpdateProjectKeywordInput!
+}
+
+input UpdateOneProjectMemberInput {
+  id: String!
+  update: UpdateProjectMemberInput!
+}
+
+input UpdateOneProjectMemberOutInput {
+  id: String!
+  update: UpdateProjectMemberOutInput!
+}
+
+input UpdateOneProjectPermitInput {
+  id: String!
+  update: UpdateProjectPermitInput!
+}
+
+input UpdateOneProjectRequiredMemberInput {
+  id: String!
+  update: UpdateProjectRequiredMemberInput!
+}
+
+input UpdateOneProjectRequiredSkillInput {
+  id: String!
+  update: UpdateProjectRequiredSkillInput!
+}
+
+input UpdateOneProjectResearchAnswerInput {
+  id: String!
+  update: UpdateProjectResearchAnswerInput!
+}
+
+input UpdateOneProjectResearchInput {
+  id: String!
+  update: UpdateProjectResearchInput!
+}
+
+input UpdateOneProjectReviewInput {
+  id: String!
+  update: UpdateProjectReviewInput!
+}
+
+input UpdateOneUserInput {
+  id: String!
+  update: UpdateUserInput!
+}
+
+input UpdateOneUserInterestKeywordInput {
+  id: String!
+  update: UpdateUserInterestKeywordInput!
+}
+
+input UpdateProfileCareerInput {
+  careerMonths: Float = 1
+  description: String
+  profileId: String!
+  title: String!
+  urls: JSON
+}
+
+input UpdateProfileInput {
+  default: Flag = N
+  introduction: String
+  jobId: String!
+  userId: String!
+}
+
+input UpdateProfileSkillInput {
+  jobSkillId: String!
+  profileId: String!
+}
+
+input UpdateProjectBookmarkInput {
+  projectId: String!
+  userId: String
+}
+
+input UpdateProjectImageInput {
+  image: String!
+  projectId: String!
+}
+
+input UpdateProjectInput {
+  bookmarkCount: Float = 0
+  category: CategoryType = junior
+  description: String
+  directLink: String
+  hitCount: Float = 0
+  image: String
+  location: String
+  locationCode: String
+  onoff: OnoffType = onoff
+  projectTitle: String
+  rate: String = "0"
+  recruitStartAt: DateTime
+  status: StatusType = recruit
+}
+
+input UpdateProjectKeywordInput {
+  keyword: String!
+  projectId: String!
+}
+
+input UpdateProjectMemberInput {
+  jobCode: String
+  profileId: String!
+  projectId: String!
+  role: String = "member"
+  status: String = "waiting"
+  userId: String!
+}
+
+input UpdateProjectMemberOutInput {
+  description: String
+  projectId: String!
+  projectLeaderUserId: String
+  reasonType: ReasonType = denied
+  userId: String!
+}
+
+input UpdateProjectPermitInput {
+  adminuserId: String
+  projectId: String!
+}
+
+input UpdateProjectRequiredMemberInput {
+  jobCount: Float = 0
+  jobId: String
+  projectId: String!
+}
+
+input UpdateProjectRequiredSkillInput {
+  jobSkillId: String!
+  projectId: String!
+}
+
+input UpdateProjectResearchAnswerInput {
+  answer: String
+  projectResearchId: String!
+  userId: String!
+}
+
+input UpdateProjectResearchInput {
+  priority: Float
+  projectId: String!
+  title: String
+}
+
+input UpdateProjectReviewInput {
+  feedback: String
+  projectId: String!
+  score: Float = 1
+  targetUserId: String
+  userId: String!
+}
+
+input UpdateUserInput {
+  email: String!
+  image: String
+  loginType: Float
+  name: String!
+  nickname: String
+  password: String!
+}
+
+input UpdateUserInterestKeywordInput {
+  keyword: String!
+  userId: String!
+}
+
+type User {
+  createdAt: DateTime!
+  email: String!
+  id: ID
+  image: String
+  loginType: Float
+  name: String!
+  nickname: String
+  password: String!
+  profiles(
+    """Specify to filter the records returned."""
+    filter: ProfileFilter = {}
+
+    """Specify to sort results."""
+    sorting: [ProfileSort!] = []
+  ): [Profile!]!
+  projectBookmarks(
+    """Specify to filter the records returned."""
+    filter: ProjectBookmarkFilter = {}
+
+    """Specify to sort results."""
+    sorting: [ProjectBookmarkSort!] = []
+  ): [ProjectBookmark!]!
+  projectMemberOuts(
+    """Specify to filter the records returned."""
+    filter: ProjectMemberOutFilter = {}
+
+    """Specify to sort results."""
+    sorting: [ProjectMemberOutSort!] = []
+  ): [ProjectMemberOut!]!
+  projectMembers(
+    """Specify to filter the records returned."""
+    filter: ProjectMemberFilter = {}
+
+    """Specify to sort results."""
+    sorting: [ProjectMemberSort!] = []
+  ): [ProjectMember!]!
+  projectReviews(
+    """Specify to filter the records returned."""
+    filter: ProjectReviewFilter = {}
+
+    """Specify to sort results."""
+    sorting: [ProjectReviewSort!] = []
+  ): [ProjectReview!]!
+  userInterestKeywords(
+    """Specify to filter the records returned."""
+    filter: UserInterestKeywordFilter = {}
+
+    """Specify to sort results."""
+    sorting: [UserInterestKeywordSort!] = []
+  ): [UserInterestKeyword!]!
+}
+
+type UserAggregateGroupBy {
+  id: ID
+}
+
+type UserConnection {
+  """Array of nodes."""
+  nodes: [User!]!
+
+  """Paging information"""
+  pageInfo: OffsetPageInfo!
+
+  """Fetch total count of records"""
+  totalCount: Int!
+}
+
+type UserCountAggregate {
+  id: Int
+}
+
+type UserDeleteResponse {
+  createdAt: DateTime
+  email: String
+  id: ID
+  image: String
+  loginType: Float
+  name: String
+  nickname: String
+  password: String
+}
+
+input UserFilter {
+  and: [UserFilter!]
+  id: IDFilterComparison
+  or: [UserFilter!]
+}
+
+input UserInput {
+  email: String!
+  image: String
+  loginType: Float
+  name: String!
+  nickname: String
+  password: String!
+}
+
+type UserInterestKeyword {
+  createdAt: DateTime!
+  id: ID
+  keyword: String!
+  userId: String!
+}
+
+type UserInterestKeywordAggregateGroupBy {
+  id: ID
+}
+
+type UserInterestKeywordConnection {
+  """Array of nodes."""
+  nodes: [UserInterestKeyword!]!
+
+  """Paging information"""
+  pageInfo: OffsetPageInfo!
+
+  """Fetch total count of records"""
+  totalCount: Int!
+}
+
+type UserInterestKeywordCountAggregate {
+  id: Int
+}
+
+type UserInterestKeywordDeleteResponse {
+  createdAt: DateTime
+  id: ID
+  keyword: String
+  userId: String
+}
+
+input UserInterestKeywordFilter {
+  and: [UserInterestKeywordFilter!]
+  id: IDFilterComparison
+  or: [UserInterestKeywordFilter!]
+}
+
+input UserInterestKeywordInput {
+  keyword: String!
+  userId: String!
+}
+
+type UserInterestKeywordMaxAggregate {
+  id: ID
+}
+
+type UserInterestKeywordMinAggregate {
+  id: ID
+}
+
+input UserInterestKeywordSort {
+  direction: SortDirection!
+  field: UserInterestKeywordSortFields!
+  nulls: SortNulls
+}
+
+enum UserInterestKeywordSortFields {
+  id
+}
+
+type UserMaxAggregate {
+  id: ID
+}
+
+type UserMinAggregate {
+  id: ID
+}
+
+input UserSort {
+  direction: SortDirection!
+  field: UserSortFields!
+  nulls: SortNulls
+}
+
+enum UserSortFields {
+  id
+}

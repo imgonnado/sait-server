@@ -5,7 +5,7 @@ export const config: Partial<ApplicationConfigInterface> = {
   DEBUG: true,
   APP: {
     APP_NAME: 'SAIT API',
-    SERVER_PORT: 4000,
+    SERVER_PORT: 3333,
     IS_DEVELOPMENT: true,
     IS_PRODUCTION: false,
     NODE_ENV: process.env.NODE_ENV,

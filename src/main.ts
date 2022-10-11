@@ -11,6 +11,7 @@ async function bootstrap() {
 
   const config = app.get(ConfigService);
   const appConfig: ApplicationConfigInterface['APP'] = config.get('APP');
+  const apiConfig: ApplicationConfigInterface['API'] = config.get('API');
 
   const port = appConfig.SERVER_PORT;
 
@@ -19,7 +20,7 @@ async function bootstrap() {
 ################################################################### 
 ####### SAIT-API SERVER START SUCCESS
 ####### NODE_ENV - ${process.env.NODE_ENV}
-####### Apollo Server - http://localhost:${port}/graphql
+####### Apollo Server - http://localhost:${port}/${apiConfig.GRAPHQL_API_PREFIX}
 ###################################################################
     `);
   });

@@ -13,14 +13,15 @@ import { AdminuserRepository } from './adminuser.repository';
 const nestjsQueryGraphQLModule = NestjsQueryTypeOrmModule.forFeature([AdminuserEntity, AdminuserRepository]);
 
 @Module({
-  providers: [AdminuserResolver, AdminuserService],
+  providers: [AdminuserResolver, AdminuserService, AdminuserRepository],
   imports: [
     NestjsQueryGraphQLModule.forFeature({
+      services: [AdminuserService],
       imports: [nestjsQueryGraphQLModule],
       dtos: [{ DTOClass: AdminuserDTO }],
     }),
-    nestjsQueryGraphQLModule,
+    // nestjsQueryGraphQLModule,
   ],
-  exports: [nestjsQueryGraphQLModule],
+  // exports: [nestjsQueryGraphQLModule],
 })
 export class AdminuserModule {}

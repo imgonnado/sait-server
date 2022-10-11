@@ -1,7 +1,7 @@
 import { ProjectEntity } from '@project/api/database';
 //import { BaseRepository } from '@project/api/database';
-import { Repository } from 'typeorm';
+import { EntityRepository, Repository } from 'typeorm';
 import { CustomRepository } from '~/db/typeorm-ex.decorator';
 
-@CustomRepository(ProjectEntity)
+@EntityRepository(ProjectEntity)
 export class ProjectRepository extends Repository<ProjectEntity> {}

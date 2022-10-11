@@ -2,6 +2,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { GraphqlModule, LoggerModule } from '@project/api/graphql';
 import { InitAppConfig } from './app.config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -28,6 +29,8 @@ import { UserModule } from './modules/user/user.module';
       ignoreEnvFile: true,
     }),
     TypeOrmModule.forRootAsync({ useClass: DatabaseConfig }),
+    GraphqlModule,
+    LoggerModule,
 
     AdminuserModule,
     AlertModule,

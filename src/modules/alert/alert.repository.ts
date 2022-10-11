@@ -4,5 +4,5 @@ import { EntityRepository, Repository } from 'typeorm';
 
 import { CustomRepository } from '~/db/typeorm-ex.decorator';
 
-@CustomRepository(AlertEntity)
+@EntityRepository(AlertEntity)
 export class AlertRepository extends Repository<AlertEntity> {}
