@@ -15,5 +15,5 @@ export const FieldsJobCreate: Readonly<Array<keyof IJob>> = ['jobTitle', 'jobCat
 
 export const FieldsJobUpdate: Readonly<Array<keyof IJob>> = ['jobTitle', 'jobCategoryId', 'jobCode'] as const;
 
-export type IJobCreate = Pick<IJob, typeof FieldsJobCreate[number]>;
-export type IJobUpdate = Pick<IJob, typeof FieldsJobUpdate[number]>;
+export interface IJobCreate extends Pick<IJob, typeof FieldsJobCreate[number]> {}
+export interface IJobUpdate extends Pick<IJob, typeof FieldsJobUpdate[number]> {}

@@ -23,5 +23,5 @@ export const FieldsJobCategoryUpdate: Readonly<Array<keyof IJobCategory>> = [
   'priority',
 ] as const;
 
-export type IJobCategoryCreate = Pick<IJobCategory, typeof FieldsJobCategoryCreate[number]>;
-export type IJobCategoryUpdate = Pick<IJobCategory, typeof FieldsJobCategoryUpdate[number]>;
+export interface IJobCategoryCreate extends Pick<IJobCategory, typeof FieldsJobCategoryCreate[number]> {}
+export interface IJobCategoryUpdate extends Pick<IJobCategory, typeof FieldsJobCategoryUpdate[number]> {}

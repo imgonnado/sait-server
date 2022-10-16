@@ -42,5 +42,5 @@ export const FieldsUserUpdate: Readonly<Array<keyof IUser>> = [
   'image',
 ] as const;
 
-export type IUserCreate = Pick<IUser, typeof FieldsUserCreate[number]>;
-export type IUserUpdate = Pick<IUser, typeof FieldsUserUpdate[number]>;
+export interface IUserCreate extends Pick<IUser, typeof FieldsUserCreate[number]> {}
+export interface IUserUpdate extends Pick<IUser, typeof FieldsUserUpdate[number]> {}

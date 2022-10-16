@@ -26,5 +26,5 @@ export const FieldsProjectMemberOutUpdate: Readonly<Array<keyof IProjectMemberOu
   'description',
 ] as const;
 
-export type IProjectMemberOutCreate = Pick<IProjectMemberOut, typeof FieldsProjectMemberOutCreate[number]>;
-export type IProjectMemberOutUpdate = Pick<IProjectMemberOut, typeof FieldsProjectMemberOutUpdate[number]>;
+export interface IProjectMemberOutCreate extends Pick<IProjectMemberOut, typeof FieldsProjectMemberOutCreate[number]> {}
+export interface IProjectMemberOutUpdate extends Pick<IProjectMemberOut, typeof FieldsProjectMemberOutUpdate[number]> {}

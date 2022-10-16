@@ -23,5 +23,5 @@ export const FieldsNoticeUpdate: Readonly<Array<keyof INotice>> = [
   'adminuserId',
 ] as const;
 
-export type INoticeCreate = Pick<INotice, typeof FieldsNoticeCreate[number]>;
-export type INoticeUpdate = Pick<INotice, typeof FieldsNoticeUpdate[number]>;
+export interface INoticeCreate extends Pick<INotice, typeof FieldsNoticeCreate[number]> {}
+export interface INoticeUpdate extends Pick<INotice, typeof FieldsNoticeUpdate[number]> {}

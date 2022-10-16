@@ -70,5 +70,5 @@ export const FieldsProjectUpdate: Readonly<Array<keyof IProject>> = [
   'directLink',
 ] as const;
 
-export type IProjectCreate = Pick<IProject, typeof FieldsProjectCreate[number]>;
-export type IProjectUpdate = Pick<IProject, typeof FieldsProjectUpdate[number]>;
+export interface IProjectCreate extends Pick<IProject, typeof FieldsProjectCreate[number]> {}
+export interface IProjectUpdate extends Pick<IProject, typeof FieldsProjectUpdate[number]> {}

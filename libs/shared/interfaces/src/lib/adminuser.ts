@@ -32,5 +32,5 @@ export const FieldsAdminuserUpdate: Readonly<Array<keyof IAdminuser>> = [
   'image',
 ] as const;
 
-export type IAdminuserCreate = Pick<IAdminuser, typeof FieldsAdminuserCreate[number]>;
-export type IAdminuserUpdate = Pick<IAdminuser, typeof FieldsAdminuserUpdate[number]>;
+export interface IAdminuserCreate extends Pick<IAdminuser, typeof FieldsAdminuserCreate[number]> {}
+export interface IAdminuserUpdate extends Pick<IAdminuser, typeof FieldsAdminuserUpdate[number]> {}

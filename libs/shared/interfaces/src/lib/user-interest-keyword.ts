@@ -16,5 +16,7 @@ export const FieldsUserInterestKeywordUpdate: Readonly<Array<keyof IUserInterest
   'keyword',
 ] as const;
 
-export type IUserInterestKeywordCreate = Pick<IUserInterestKeyword, typeof FieldsUserInterestKeywordCreate[number]>;
-export type IUserInterestKeywordUpdate = Pick<IUserInterestKeyword, typeof FieldsUserInterestKeywordUpdate[number]>;
+export interface IUserInterestKeywordCreate
+  extends Pick<IUserInterestKeyword, typeof FieldsUserInterestKeywordCreate[number]> {}
+export interface IUserInterestKeywordUpdate
+  extends Pick<IUserInterestKeyword, typeof FieldsUserInterestKeywordUpdate[number]> {}

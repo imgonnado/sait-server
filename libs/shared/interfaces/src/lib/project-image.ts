@@ -10,5 +10,5 @@ export const FieldsProjectImageCreate: Readonly<Array<keyof IProjectImage>> = ['
 
 export const FieldsProjectImageUpdate: Readonly<Array<keyof IProjectImage>> = ['projectId', 'image'] as const;
 
-export type IProjectImageCreate = Pick<IProjectImage, typeof FieldsProjectImageCreate[number]>;
-export type IProjectImageUpdate = Pick<IProjectImage, typeof FieldsProjectImageUpdate[number]>;
+export interface IProjectImageCreate extends Pick<IProjectImage, typeof FieldsProjectImageCreate[number]> {}
+export interface IProjectImageUpdate extends Pick<IProjectImage, typeof FieldsProjectImageUpdate[number]> {}

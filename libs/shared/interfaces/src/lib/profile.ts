@@ -31,5 +31,5 @@ export const FieldsProfileUpdate: Readonly<Array<keyof IProfile>> = [
   'introduction',
 ] as const;
 
-export type IProfileCreate = Pick<IProfile, typeof FieldsProfileCreate[number]>;
-export type IProfileUpdate = Pick<IProfile, typeof FieldsProfileUpdate[number]>;
+export interface IProfileCreate extends Pick<IProfile, typeof FieldsProfileCreate[number]> {}
+export interface IProfileUpdate extends Pick<IProfile, typeof FieldsProfileUpdate[number]> {}

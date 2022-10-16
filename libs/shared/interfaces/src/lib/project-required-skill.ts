@@ -16,5 +16,7 @@ export const FieldsProjectRequiredSkillUpdate: Readonly<Array<keyof IProjectRequ
   'jobSkillId',
 ] as const;
 
-export type IProjectRequiredSkillCreate = Pick<IProjectRequiredSkill, typeof FieldsProjectRequiredSkillCreate[number]>;
-export type IProjectRequiredSkillUpdate = Pick<IProjectRequiredSkill, typeof FieldsProjectRequiredSkillUpdate[number]>;
+export interface IProjectRequiredSkillCreate
+  extends Pick<IProjectRequiredSkill, typeof FieldsProjectRequiredSkillCreate[number]> {}
+export interface IProjectRequiredSkillUpdate
+  extends Pick<IProjectRequiredSkill, typeof FieldsProjectRequiredSkillUpdate[number]> {}

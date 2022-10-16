@@ -19,11 +19,7 @@ export const FieldsProjectRequiredMemberUpdate: Readonly<Array<keyof IProjectReq
   'jobCount',
 ] as const;
 
-export type IProjectRequiredMemberCreate = Pick<
-  IProjectRequiredMember,
-  typeof FieldsProjectRequiredMemberCreate[number]
->;
-export type IProjectRequiredMemberUpdate = Pick<
-  IProjectRequiredMember,
-  typeof FieldsProjectRequiredMemberUpdate[number]
->;
+export interface IProjectRequiredMemberCreate
+  extends Pick<IProjectRequiredMember, typeof FieldsProjectRequiredMemberCreate[number]> {}
+export interface IProjectRequiredMemberUpdate
+  extends Pick<IProjectRequiredMember, typeof FieldsProjectRequiredMemberUpdate[number]> {}

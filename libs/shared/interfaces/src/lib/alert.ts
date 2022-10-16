@@ -29,5 +29,5 @@ export const FieldsAlertUpdate: Readonly<Array<keyof IAlert>> = [
   'readFlag',
 ] as const;
 
-export type IAlertCreate = Pick<IAlert, typeof FieldsAlertCreate[number]>;
-export type IAlertUpdate = Pick<IAlert, typeof FieldsAlertUpdate[number]>;
+export interface IAlertCreate extends Pick<IAlert, typeof FieldsAlertCreate[number]> {}
+export interface IAlertUpdate extends Pick<IAlert, typeof FieldsAlertUpdate[number]> {}

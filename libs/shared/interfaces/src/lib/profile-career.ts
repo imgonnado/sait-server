@@ -25,5 +25,5 @@ export const FieldsProfileCareerUpdate: Readonly<Array<keyof IProfileCareer>> = 
   'urls',
 ] as const;
 
-export type IProfileCareerCreate = Pick<IProfileCareer, typeof FieldsProfileCareerCreate[number]>;
-export type IProfileCareerUpdate = Pick<IProfileCareer, typeof FieldsProfileCareerUpdate[number]>;
+export interface IProfileCareerCreate extends Pick<IProfileCareer, typeof FieldsProfileCareerCreate[number]> {}
+export interface IProfileCareerUpdate extends Pick<IProfileCareer, typeof FieldsProfileCareerUpdate[number]> {}

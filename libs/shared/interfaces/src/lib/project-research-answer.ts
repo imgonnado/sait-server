@@ -19,11 +19,7 @@ export const FieldsProjectResearchAnswerUpdate: Readonly<Array<keyof IProjectRes
   'answer',
 ] as const;
 
-export type IProjectResearchAnswerCreate = Pick<
-  IProjectResearchAnswer,
-  typeof FieldsProjectResearchAnswerCreate[number]
->;
-export type IProjectResearchAnswerUpdate = Pick<
-  IProjectResearchAnswer,
-  typeof FieldsProjectResearchAnswerUpdate[number]
->;
+export interface IProjectResearchAnswerCreate
+  extends Pick<IProjectResearchAnswer, typeof FieldsProjectResearchAnswerCreate[number]> {}
+export interface IProjectResearchAnswerUpdate
+  extends Pick<IProjectResearchAnswer, typeof FieldsProjectResearchAnswerUpdate[number]> {}

@@ -10,5 +10,5 @@ export const FieldsProjectHitCreate: Readonly<Array<keyof IProjectHit>> = ['proj
 
 export const FieldsProjectHitUpdate: Readonly<Array<keyof IProjectHit>> = ['projectId', 'userId'] as const;
 
-export type IProjectHitCreate = Pick<IProjectHit, typeof FieldsProjectHitCreate[number]>;
-export type IProjectHitUpdate = Pick<IProjectHit, typeof FieldsProjectHitUpdate[number]>;
+export interface IProjectHitCreate extends Pick<IProjectHit, typeof FieldsProjectHitCreate[number]> {}
+export interface IProjectHitUpdate extends Pick<IProjectHit, typeof FieldsProjectHitUpdate[number]> {}

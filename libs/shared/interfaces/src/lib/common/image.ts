@@ -9,7 +9,7 @@ export interface IImageBase {
 export interface IImage extends IImageBase, IDeletableBase {}
 
 export const FieldsImageUpdate: Readonly<Array<keyof IImage>> = ['id', 'url', 'path', 'alert', 'priority'] as const;
-export type IImageUpdate = Pick<IImage, typeof FieldsImageUpdate[number]>;
+export interface IImageUpdate extends Pick<IImage, typeof FieldsImageUpdate[number]> {}
 
 export const FieldsImageCreate: Readonly<Array<keyof IImage>> = ['id', 'url', 'path', 'alert', 'priority'] as const;
-export type IImageCreate = Pick<IImage, typeof FieldsImageCreate[number]>;
+export interface IImageCreate extends Pick<IImage, typeof FieldsImageCreate[number]> {}

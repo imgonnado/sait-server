@@ -25,5 +25,5 @@ export const FieldsProjectReviewUpdate: Readonly<Array<keyof IProjectReview>> = 
   'score',
 ] as const;
 
-export type IProjectReviewCreate = Pick<IProjectReview, typeof FieldsProjectReviewCreate[number]>;
-export type IProjectReviewUpdate = Pick<IProjectReview, typeof FieldsProjectReviewUpdate[number]>;
+export interface IProjectReviewCreate extends Pick<IProjectReview, typeof FieldsProjectReviewCreate[number]> {}
+export interface IProjectReviewUpdate extends Pick<IProjectReview, typeof FieldsProjectReviewUpdate[number]> {}

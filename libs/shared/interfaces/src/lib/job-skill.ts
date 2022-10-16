@@ -22,5 +22,5 @@ export const FieldsJobSkillUpdate: Readonly<Array<keyof IJobSkill>> = [
   'image',
 ] as const;
 
-export type IJobSkillCreate = Pick<IJobSkill, typeof FieldsJobSkillCreate[number]>;
-export type IJobSkillUpdate = Pick<IJobSkill, typeof FieldsJobSkillUpdate[number]>;
+export interface IJobSkillCreate extends Pick<IJobSkill, typeof FieldsJobSkillCreate[number]> {}
+export interface IJobSkillUpdate extends Pick<IJobSkill, typeof FieldsJobSkillUpdate[number]> {}

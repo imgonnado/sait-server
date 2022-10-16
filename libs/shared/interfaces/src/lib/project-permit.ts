@@ -10,5 +10,5 @@ export const FieldsProjectPermitCreate: Readonly<Array<keyof IProjectPermit>> = 
 
 export const FieldsProjectPermitUpdate: Readonly<Array<keyof IProjectPermit>> = ['projectId', 'adminuserId'] as const;
 
-export type IProjectPermitCreate = Pick<IProjectPermit, typeof FieldsProjectPermitCreate[number]>;
-export type IProjectPermitUpdate = Pick<IProjectPermit, typeof FieldsProjectPermitUpdate[number]>;
+export interface IProjectPermitCreate extends Pick<IProjectPermit, typeof FieldsProjectPermitCreate[number]> {}
+export interface IProjectPermitUpdate extends Pick<IProjectPermit, typeof FieldsProjectPermitUpdate[number]> {}

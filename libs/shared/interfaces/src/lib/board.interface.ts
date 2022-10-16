@@ -48,5 +48,5 @@ export const FieldsBoardUpdate: Readonly<Array<keyof IBoardBase>> = [
   'name',
 ] as const;
 
-export type IBoardCreate = Pick<IBoardBase, typeof FieldsBoardCreate[number]>;
-export type IBoardUpdate = Pick<IBoardBase, typeof FieldsBoardUpdate[number]>;
+export interface IBoardCreate extends Pick<IBoardBase, typeof FieldsBoardCreate[number]> {}
+export interface IBoardUpdate extends Pick<IBoardBase, typeof FieldsBoardUpdate[number]> {}

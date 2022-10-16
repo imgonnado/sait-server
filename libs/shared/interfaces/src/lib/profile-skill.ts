@@ -10,5 +10,5 @@ export const FieldsProfileSkillCreate: Readonly<Array<keyof IProfileSkill>> = ['
 
 export const FieldsProfileSkillUpdate: Readonly<Array<keyof IProfileSkill>> = ['profileId', 'jobSkillId'] as const;
 
-export type IProfileSkillCreate = Pick<IProfileSkill, typeof FieldsProfileSkillCreate[number]>;
-export type IProfileSkillUpdate = Pick<IProfileSkill, typeof FieldsProfileSkillUpdate[number]>;
+export interface IProfileSkillCreate extends Pick<IProfileSkill, typeof FieldsProfileSkillCreate[number]> {}
+export interface IProfileSkillUpdate extends Pick<IProfileSkill, typeof FieldsProfileSkillUpdate[number]> {}
