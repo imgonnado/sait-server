@@ -1,6 +1,6 @@
-import { Logger, ValidationPipe } from '@nestjs/common';
+import { ClassSerializerInterceptor, Logger, ValidationPipe } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { NestFactory } from '@nestjs/core';
+import { NestFactory, Reflector } from '@nestjs/core';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { AppModule } from './app.module';
 import { ApplicationConfigInterface } from './types/services/application.config.interface';
@@ -8,7 +8,7 @@ import { ApplicationConfigInterface } from './types/services/application.config.
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
   app.useGlobalPipes(new ValidationPipe());
-
+  app.useGlobalInterceptors(new ClassSerializerInterceptor(app.get(Reflector)));
   const config = app.get(ConfigService);
   const appConfig: ApplicationConfigInterface['APP'] = config.get('APP');
   const apiConfig: ApplicationConfigInterface['API'] = config.get('API');

@@ -14,19 +14,19 @@ class MutationUserBase extends UserDTO implements IUserBase, ICreatedOnlyBase {
   @Field(() => [CreateProfileInput], { nullable: false })
   profiles: CreateProfileInput[];
 
-  @Field(() => [CreateProjectBookmarkInput], { nullable: false })
+  //@Field(() => [CreateProjectBookmarkInput], { nullable: false })
   projectBookmarks: CreateProjectBookmarkInput[];
 
-  @Field(() => [CreateProjectMemberInput], { nullable: false })
+  //@Field(() => [CreateProjectMemberInput], { nullable: false })
   projectMembers: CreateProjectMemberInput[];
 
-  @Field(() => [CreateProjectMemberOutInput], { nullable: false })
+  //@Field(() => [CreateProjectMemberOutInput], { nullable: false })
   projectMemberOuts: CreateProjectMemberOutInput[];
 
-  @Field(() => [CreateProjectReviewInput], { nullable: false })
+  //@Field(() => [CreateProjectReviewInput], { nullable: false })
   projectReviews: CreateProjectReviewInput[];
 
-  @Field(() => [CreateUserInterestKeywordInput], { nullable: false })
+  //@Field(() => [CreateUserInterestKeywordInput], { nullable: false })
   userInterestKeywords: CreateUserInterestKeywordInput[];
 }
 
