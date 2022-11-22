@@ -1,6 +1,6 @@
 import { AutoMap } from '@automapper/classes';
 import { IUpdateable, IUpdateableBase } from '@project/shared/interfaces';
-import { Type } from 'class-transformer/types/decorators';
+import { Type } from 'class-transformer';
 import { UpdateDateColumn } from 'typeorm';
 import { CreatedOnlyBaseEntity, CreatedOnlyEntity } from './createdOnly.entity';
 

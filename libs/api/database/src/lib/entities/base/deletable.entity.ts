@@ -1,12 +1,12 @@
 import { AutoMap } from '@automapper/classes';
 import { IDeletable, IDeletableBase } from '@project/shared/interfaces';
-import { Type } from 'class-transformer/types/decorators';
+import { Type } from 'class-transformer';
 import { DeleteDateColumn } from 'typeorm';
 import { UpdateableBaseEntity, UpdateableEntity } from './updateable.entity';
 
 export abstract class DeletableEntity extends UpdateableEntity implements IDeletable {
-  @AutoMap()
   @Type(() => Date)
+  @AutoMap()
   @DeleteDateColumn({
     name: 'deleted_at',
     type: 'timestamp',
@@ -17,8 +17,8 @@ export abstract class DeletableEntity extends UpdateableEntity implements IDelet
 }
 
 export abstract class DeletableBaseEntity extends UpdateableBaseEntity implements IDeletableBase {
-  @AutoMap()
   @Type(() => Date)
+  @AutoMap()
   @DeleteDateColumn({
     name: 'deleted_at',
     type: 'timestamp',
