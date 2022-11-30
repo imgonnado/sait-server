@@ -14,9 +14,10 @@ export const config: Partial<ApplicationConfigInterface> = {
   DATABASE: {
     TYPE: 'mysql',
     HOST: 'misookhe.iptime.org',
-    PORT: 13306,
+    PORT: 23306,
     USERNAME: 'root',
-    PASSWORD: 'pwd1234',
+    // PASSWORD: 'password_misook2',
+    PASSWORD: 'sideitisgood',
     DATABASE: 'sait_test',
     SYNCHRONIZE: true,
   },
