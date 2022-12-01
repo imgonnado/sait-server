@@ -23,6 +23,7 @@
   "dependencies": {
     "@automapper/classes": "^8.7.6",
     "@automapper/core": "^8.7.6",
+    "@faker-js/faker": "^7.6.0",
     "@nestjs-query/core": "^0.30.0",
     "@nestjs-query/query-graphql": "^0.30.0",
     "@nestjs-query/query-typeorm": "^0.30.0",
@@ -37,6 +38,7 @@
     "@nestjs/typeorm": "8.0.1",
     "@types/cls-hooked": "4.3.3",
     "apollo-server-express": "^3.10.3",
+    "async-lodash": "^1.0.9",
     "class-transformer": "0.5.1",
     "class-validator": "^0.13.2",
     "cls-hooked": "4.2.2",
@@ -47,6 +49,7 @@
     "graphql-scalars": "^1.20.1",
     "graphql-subscriptions": "^2.0.0",
     "graphql-type-json": "^0.3.2",
+    "lodash": "^4.17.21",
     "mysql": "^2.18.1",
     "nest-winston": "^1.7.1",
     "node-request-context": "^1.0.5",

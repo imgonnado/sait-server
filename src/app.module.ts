@@ -9,6 +9,8 @@ import { AppService } from './app.service';
 import { DatabaseConfig } from './db/databaseConnection.config';
 import { AdminuserModule } from './modules/adminuser/adminuser.module';
 import { AlertModule } from './modules/alert/alert.module';
+import { FakerController } from './modules/faker/faker.controller';
+import { FakerModule } from './modules/faker/faker.module';
 import { JobCategoryModule } from './modules/job-category/job-category.module';
 import { JobSkillModule } from './modules/job-skill/job-skill.module';
 import { JobModule } from './modules/job/job.module';
@@ -44,6 +46,7 @@ import { UserModule } from './modules/user/user.module';
     UserModule,
     UserInterestKeywordModule,
     ProjectModule,
+    FakerModule,
   ],
   controllers: [AppController],
   providers: [AppService],
