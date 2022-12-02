@@ -2,6 +2,7 @@ import { Controller, Get, Param } from '@nestjs/common';
 import { UserDTO } from '../user/dto/user.dto';
 import { FakerService } from './faker.service';
 import _ from 'lodash';
+import { ProjectDTO } from '../project/dto/project.dto';
 @Controller('faker')
 export class FakerController {
   constructor(private readonly fakerService: FakerService) {}
@@ -16,5 +17,10 @@ export class FakerController {
     return await _.times(count, async () => {
       return await this.fakerService.makeUser();
     });
+  }
+
+  @Get('/project')
+  async makeOneProject(): Promise<ProjectDTO> {
+    return await this.fakerService.makeProject();
   }
 }
