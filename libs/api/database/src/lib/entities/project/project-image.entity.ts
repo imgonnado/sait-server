@@ -7,12 +7,6 @@ import { ProjectEntity } from '@project/api/database';
 
 @Entity('project_image', { orderBy: { id: 'DESC' } })
 export class ProjectImageEntity extends CreatedOnlyBaseEntity implements IProjectImage {
-  @Column('bigint', {
-    name: 'project_id',
-    comment: '프로젝트id(n:1)',
-  })
-  projectId: string;
-
   @Column('varchar', {
     name: 'image',
     comment: '소셜타입',

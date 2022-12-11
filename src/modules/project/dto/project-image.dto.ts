@@ -7,8 +7,5 @@ import { CreatedOnlyBase } from '../../common/dto/base.dto';
 @ObjectType('ProjectImage')
 export class ProjectImageDTO extends CreatedOnlyBase implements IProjectImageBase {
   @Field()
-  projectId: string;
-
-  @Field()
   image: string;
 }
