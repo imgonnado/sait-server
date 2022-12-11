@@ -23,4 +23,11 @@ export class FakerController {
   async makeOneProject(): Promise<ProjectDTO> {
     return await this.fakerService.makeProject();
   }
+
+  @Get('/project/:count')
+  async makeManyProject(@Param('count') count: number): Promise<ProjectDTO> {
+    return await _.times(count, async () => {
+      return this.fakerService.makeProject();
+    });
+  }
 }
