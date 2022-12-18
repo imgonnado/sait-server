@@ -5,6 +5,7 @@ type SOCIAL_AUTH = {
   CLIENT_ID: string;
   CLIENT_SECRET?: string;
   CALLBACK_URL: string;
+  CALLBACK_UNLINK_URL: string;
 };
 export interface AuthInfo {
   KEY: string;
@@ -56,9 +57,9 @@ export interface ApplicationConfigInterface {
   };
   EXTERNAL_AUTH?: {
     KAKAO: SOCIAL_AUTH;
-    NAVER: SOCIAL_AUTH;
-    GOOGLE: SOCIAL_AUTH;
-    FACEBOOK: SOCIAL_AUTH;
+    // NAVER: SOCIAL_AUTH;
+    // GOOGLE: SOCIAL_AUTH;
+    // FACEBOOK: SOCIAL_AUTH;
   };
   NOTIFICATION: {
     KAKAO: {

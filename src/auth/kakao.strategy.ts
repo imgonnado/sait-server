@@ -1,27 +1,27 @@
 import { PassportStrategy } from '@nestjs/passport';
 import { Strategy } from 'passport-kakao';
-import * as config from 'config';
+import { ConfigService } from '@nestjs/config';
 import { UserKakaoDto } from './dto/user.kakao.dto';
-
-const kakaoConfig = config.get('kakao');
+import { UserDTO } from '~/modules/user/dto/user.dto';
+import { ApplicationConfigInterface } from '~/types/services/application.config.interface';
 
 export class KakaoStrategy extends PassportStrategy(Strategy, 'kakao') {
-  constructor() {
+  constructor(private readonly configService: ConfigService<ApplicationConfigInterface>) {
     super({
-      clientID: kakaoConfig.clientID,
-      clientSecret: kakaoConfig.clientSecret,
-      callbackURL: kakaoConfig.callbackURL,
+      clientID: configService.get('EXTERNAL_AUTH')['KAKAO']['CLIENT_ID'],
+      callbackURL: configService.get('EXTERNAL_AUTH')['KAKAO']['CALLBACK_URL'],
     });
   }
 
   async validate(accessToken: string, refreshToken: string, profile: any, done) {
-    const { id, username, displayName } = profile;
-    const user = new UserKakaoDto();
-    user.id = id;
-    user.username = username;
-    user.displayName = displayName;
-    user.accessToken = accessToken;
-    user.refreshToken = refreshToken;
+    const profileJson = profile._json;
+    const kakaoAccount = profileJson.kakao_account;
+    const user: UserKakaoDto = {
+      uid: profileJson.id,
+      email: kakaoAccount.email,
+      name: profileJson?.properties?.nickname ?? '',
+      pictureUrl: kakaoAccount?.profile?.profile_image_url ?? '',
+    };
     done(null, user);
   }
 }

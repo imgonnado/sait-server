@@ -1,7 +1,6 @@
 export class UserKakaoDto {
-  id: string;
-  username: string;
-  displayName: string;
-  accessToken: string;
-  refreshToken: string;
+  uid: string;
+  email: string;
+  name: string;
+  pictureUrl: string;
 }

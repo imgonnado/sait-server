@@ -518,7 +518,6 @@ input CreateProjectBookmarkInput {
 
 input CreateProjectImageInput {
   image: String!
-  projectId: String!
 }
 
 input CreateProjectInput {
@@ -1609,7 +1608,6 @@ type ProjectImage {
   createdAt: DateTime!
   id: ID
   image: String!
-  projectId: String!
 }
 
 type ProjectImageAggregateGroupBy {
@@ -1635,7 +1633,6 @@ type ProjectImageDeleteResponse {
   createdAt: DateTime
   id: ID
   image: String
-  projectId: String
 }
 
 input ProjectImageFilter {
@@ -1646,7 +1643,6 @@ input ProjectImageFilter {
 
 input ProjectImageInput {
   image: String!
-  projectId: String!
 }
 
 type ProjectImageMaxAggregate {
@@ -3194,7 +3190,6 @@ input UpdateProjectBookmarkInput {
 
 input UpdateProjectImageInput {
   image: String!
-  projectId: String!
 }
 
 input UpdateProjectInput {

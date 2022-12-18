@@ -48,6 +48,13 @@ export const config: ApplicationConfigInterface = {
       API_KEY: 'SG.4TtKm4BJRMCiuTTkVY4O-Q.cwN3fOnIzzzzzzzzzzzzzzz',
     },
   },
+  EXTERNAL_AUTH: {
+    KAKAO: {
+      CALLBACK_URL: 'http://localhost:3333/api/auth/kakao/callback',
+      CLIENT_ID: '771947e6e05aae26fd807561660f0b16',
+      CALLBACK_UNLINK_URL: 'http://localhost:3333/api/auth/unlink/kakao/callback',
+    },
+  },
   NOTIFICATION: {
     KAKAO: {
       PLUS_FRIEND_ID: '@',
