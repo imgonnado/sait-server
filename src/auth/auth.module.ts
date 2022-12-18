@@ -7,6 +7,7 @@ import * as config from 'config';
 import { KakaoStrategy } from './kakao.strategy';
 import { JwtStrategy } from './jwt.strategy';
 import { AuthService } from './auth.service';
+import { KakaoUnlinkStrategy } from './strategy/unlink/kakao-unlink.strategy';
 const jwtConfig = config.get('jwt');
 
 @Module({
@@ -20,6 +21,6 @@ const jwtConfig = config.get('jwt');
     }),
   ],
   controllers: [AuthController],
-  providers: [AuthService, KakaoStrategy, JwtStrategy],
+  providers: [AuthService, KakaoStrategy, KakaoUnlinkStrategy, JwtStrategy],
 })
 export class AuthModule {}
